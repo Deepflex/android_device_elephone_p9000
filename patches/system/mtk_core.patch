@@ -1,0 +1,29 @@
+diff -Naur ./core/healthd/BatteryMonitor.cpp ./core_mtk/healthd/BatteryMonitor.cpp
+--- ./core/healthd/BatteryMonitor.cpp	2016-07-13 01:23:16.162702000 +0700
++++ ./core_mtk/healthd/BatteryMonitor.cpp	2016-07-13 01:45:10.818716290 +0700
+@@ -206,7 +206,11 @@
+     props.batteryLevel = mBatteryFixedCapacity ?
+         mBatteryFixedCapacity :
+         getIntField(mHealthdConfig->batteryCapacityPath);
++#ifndef MTK_HARDWARE
+     props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath) / 1000;
++#else
++    props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath);
++#endif
+ 
+     props.batteryTemperature = mBatteryFixedTemperature ?
+         mBatteryFixedTemperature :
+diff -Naur ./core/init/init.cpp ./core_mtk/init/init.cpp
+--- ./core/init/init.cpp	2016-07-13 01:23:16.178702000 +0700
++++ ./core_mtk/init/init.cpp	2016-07-13 01:45:10.890716291 +0700
+@@ -85,7 +85,9 @@
+ static char console_name[PROP_VALUE_MAX] = "/dev/console";
+ static time_t process_needs_restart;
+ 
+-static const char *ENV[32];
++// xen0n: some MTK services (e.g. ril-daemon-mtk) require very large number
++// of sockets, which can't be contained in 32 entries minus other variables.
++static const char *ENV[64];
+ 
+ bool waiting_for_exec = false;
+ 
