@@ -1,0 +1,4 @@
+# GPS
+TARGET_SPECIFIC_HEADER_PATH := device/elephone/p9000/include
+BOARD_GPS_LIBRARIES :=true
+BOARD_MEDIATEK_USES_GPS := true
