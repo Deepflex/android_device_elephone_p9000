@@ -63,11 +63,18 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/11270000.usb3/musb-hdrc/gadg
 
 # TWRP
 TW_THEME := portrait_hdpi
-BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_CRYPTO := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness/
+TW_MAX_BRIGHTNESS := 255
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-TW_TARGET_USES_QCOM_BSP := true
+TWHAVE_SELINUX := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_NEW_ION_HEAP := true
+TW_FLASH_FROM_STORAGE := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_INCLUDE_NTFS_3G := true
