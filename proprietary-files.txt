@@ -326,6 +326,7 @@ lib64/libgas.so
 lib64/libged.so
 lib64/libgem.so
 lib64/libgpu_aux.so
+lib64/libgralloc_extra.so
 lib64/libhdrproc.so
 lib64/libhwm.so
 lib64/libimageio_plat_drv.so
@@ -506,6 +507,7 @@ lib/libgas.so
 lib/libged.so
 lib/libgem.so
 lib/libgpu_aux.so
+lib/libgralloc_extra.so
 lib/libhdrproc.so
 lib/libhwm.so
 lib/libimageio_plat_drv.so
