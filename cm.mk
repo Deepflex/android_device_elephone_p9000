@@ -17,28 +17,27 @@
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-# Inherit common CM stuff
+# Release name
+PRODUCT_RELEASE_NAME := p9000
+
+# Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Inherit device configurations
-$(call inherit-product, device/elephone/p9000/device_p9000.mk)
+# Inherit device configuration
+$(call inherit-product, $(LOCAL_PATH)/device_p9000.mk)
 
-# Device display
+# Configure dalvik heap
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
+
+# Configure hwui memory
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
+
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Device identifications
-PRODUCT_BRAND := Elephone
+# Device identifier
 PRODUCT_DEVICE := p9000
-PRODUCT_MANUFACTURER := Elephone
-PRODUCT_MODEL := P9000
 PRODUCT_NAME := cm_p9000
-
-# Release name
-PRODUCT_RELEASE_NAME := P9000
-
-# Build
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=Elephone \
-    BUILD_PRODUCT=Elephone \
-    TARGET_DEVICE=Elephone
+PRODUCT_BRAND := elephone
+PRODUCT_MODEL := p9000
+PRODUCT_MANUFACTURER := elephone
