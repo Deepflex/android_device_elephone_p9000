@@ -20,7 +20,12 @@ ifeq ($(TARGET_DEVICE),p9000)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-# HACK for prebuilt kernel
+# Prebuilt kernel
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+
+# TWRP
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/etc; \
+    cp -a device/elephone/p9000/twrp/twrp.fstab \
+$(TARGET_RECOVERY_ROOT_OUT)/etc;)
 
 endif

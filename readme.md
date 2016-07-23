@@ -5,7 +5,7 @@ The Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone.
 
 It was announced on 25 December 2015.
 
-P9000 is support now by CyanogenMod 13.0
+Now P9000 supporting CyanogenMod 13.0
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -16,7 +16,7 @@ Shipped Android Version | 6.0
 Storage | 32GB
 Battery | 3000 mAh
 Display | 5.5" 1920 x 1080 px
-Base Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
+Rear Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
 Front Camera | 8MP (OV)
 
 ![Elephone P9000](http://www.pixic.ru/i/p0Y19177m022b1u5.png "Elephone P9000 in black")
