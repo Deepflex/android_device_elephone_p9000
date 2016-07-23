@@ -85,7 +85,6 @@ enum {
     /// the following define the extended gralloc enumeration value of
     GRALLOC_USAGE_NULL_BUFFER           = GRALLOC_USAGE_PRIVATE_3,
     GRALLOC_USAGE_SECURE                = 0x01000000,
-    GRALLOC_USAGE_CAMERA_ORIENTATION   = 0x02000000,
 };
 
 #ifdef __cplusplus

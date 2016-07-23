@@ -10,7 +10,7 @@
 #include <utils/Trace.h>
 
 #include <system/graphics.h>
-#include <graphics_mtk_defs.h>
+#include <hardware/graphics_mtk_defs.h>
 
 #include <hardware/gralloc.h>
 #include <hardware/gralloc_extra.h>
@@ -129,26 +129,6 @@ int android::GraphicBufferExtra::perform(
     return err; 
 } 
 
-
-#if 0
-int android::GraphicBufferExtra::free_sec(
-        buffer_handle_t handle)
-{
-    ATRACE_CALL();
-    int err;
-    if (!mExtraDev || !mExtraDev->perform)
-    {
-        ALOGW("gralloc extra device perform(...) is not supported");
-        return -GRALLOC_EXTRA_NOT_SUPPORTED;
-    }
-    err = mExtraDev->free_sec(mExtraDev, handle);
-    if (err < 0)
-        ALOGW("free_sec failed %d", err);
-    return err;
-}
-#endif
-
-
 extern "C" int gralloc_extra_query(
         buffer_handle_t handle, GRALLOC_EXTRA_ATTRIBUTE_QUERY attribute, void * out_pointer) 
 { 
@@ -160,14 +140,6 @@ extern "C" int gralloc_extra_perform(
 { 
     return android::GraphicBufferExtra::get().perform(handle, attribute, in_pointer); 
 }
-
-#if 0
-extern "C" int gralloc_extra_free_sec(buffer_handle_t handle )
-{
-    return android::GraphicBufferExtra::get().free_sec(handle);
-}
-#endif
-
 
 static int __gralloc_extra_sf_set_int(int *data, int32_t mask, int32_t value)
 {

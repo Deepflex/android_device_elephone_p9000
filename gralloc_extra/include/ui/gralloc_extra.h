@@ -38,8 +38,6 @@ typedef enum {
     GRALLOC_EXTRA_GET_ALLOC_SIZE,
     GRALLOC_EXTRA_GET_FORMAT,
     GRALLOC_EXTRA_GET_USAGE,
-    GRALLOC_EXTRA_GET_VERTICAL_2ND_STRIDE,
-    GRALLOC_EXTRA_GET_BYTE_2ND_STRIDE,        
 
     /* output: gralloc_extra_sf_info_t */
     GRALLOC_EXTRA_GET_IOCTL_ION_SF_INFO = 100,
@@ -56,9 +54,6 @@ typedef enum {
     /* output: gralloc_gpu_compression_info_t */
     GRALLOC_EXTRA_GET_GPU_COMPRESSION_INFO,
 
-    /* output: gralloc_gpu_yuyv rotation */
-    GRALLOC_EXTRA_GET_ORIENTATION,
-    
 } GRALLOC_EXTRA_ATTRIBUTE_QUERY;
 
 /* enum for perform() */
@@ -71,24 +66,14 @@ typedef enum {
 
     /* input: NULL */
     GRALLOC_EXTRA_ALLOC_SECURE_BUFFER_HWC,
-    GRALLOC_EXTRA_FREE_SEC_BUFFER_HWC,
-
-    /* input: gralloc_gpu_yuyv rotation */
-    GRALLOC_EXTRA_SET_ORIENTATION,
 } GRALLOC_EXTRA_ATTRIBUTE_PERFORM;
 
 int gralloc_extra_query(buffer_handle_t handle, GRALLOC_EXTRA_ATTRIBUTE_QUERY attribute, void *out_pointer);
 
 int gralloc_extra_perform(buffer_handle_t handle, GRALLOC_EXTRA_ATTRIBUTE_PERFORM attribute, void *in_pointer);
 
-int gralloc_extra_free_sec(buffer_handle_t handle);
-
-
 #define GRALLOC_EXTRA_MAKE_BIT(start_bit, index)        ( (index) << (start_bit) )
 #define GRALLOC_EXTRA_MAKE_MASK(start_bit, end_bit)     ( ( ((unsigned int)-1) >> (sizeof(int) * __CHAR_BIT__ - 1 - (end_bit) + (start_bit) ) ) << (start_bit) )
-
-#define GRALLOC_EXTRA_UNMAKE_BIT(start_bit, index)        ( (index) >> (start_bit) )
-
 
 /* bits in sf_info.status */
 enum {
@@ -99,34 +84,22 @@ enum {
     GRALLOC_EXTRA_BIT_TYPE_CAMERA       = GRALLOC_EXTRA_MAKE_BIT(0,3),
     GRALLOC_EXTRA_MASK_TYPE             = GRALLOC_EXTRA_MAKE_MASK(0,1),
 
-    /* UFO alignment: bit 2~3 Temporary add back to prevent 6795 build fail. 
-       Remove after 6795 SF/HWC finishes porting
-     */
+    /* UFO alignment: bit 2~3 */
     GRALLOC_EXTRA_BIT_UFO_16_32         = GRALLOC_EXTRA_MAKE_BIT(2,1),
     GRALLOC_EXTRA_BIT_UFO_32_32         = GRALLOC_EXTRA_MAKE_BIT(2,2),
     GRALLOC_EXTRA_BIT_UFO_64_64         = GRALLOC_EXTRA_MAKE_BIT(2,3),
     GRALLOC_EXTRA_MASK_UFO_ALIGN        = GRALLOC_EXTRA_MAKE_MASK(2,3),
 
-    /* ColorFormat: bit 2~6 */
-    GRALLOC_EXTRA_BIT_CM_YV12           = GRALLOC_EXTRA_MAKE_BIT(2,0),
-    GRALLOC_EXTRA_BIT_CM_YUYV           = GRALLOC_EXTRA_MAKE_BIT(2,1),
-    GRALLOC_EXTRA_BIT_CM_I420           = GRALLOC_EXTRA_MAKE_BIT(2,2),
-    GRALLOC_EXTRA_BIT_CM_NV12           = GRALLOC_EXTRA_MAKE_BIT(2,3),
-    GRALLOC_EXTRA_BIT_CM_YUV420_FLEX    = GRALLOC_EXTRA_MAKE_BIT(2,4),
-    GRALLOC_EXTRA_BIT_CM_NV12_BLK       = GRALLOC_EXTRA_MAKE_BIT(2,5),
-    GRALLOC_EXTRA_BIT_CM_NV12_BLK_FCM   = GRALLOC_EXTRA_MAKE_BIT(2,6),
-    GRALLOC_EXTRA_BIT_CM_UFO            = GRALLOC_EXTRA_MAKE_BIT(2,7),
-    GRALLOC_EXTRA_BIT_CM_PRIVATE        = GRALLOC_EXTRA_MAKE_BIT(2,8),
-    GRALLOC_EXTRA_BIT_CM_YV12_10BIT     = GRALLOC_EXTRA_MAKE_BIT(2,9),
-    GRALLOC_EXTRA_BIT_CM_YUYV_10BIT     = GRALLOC_EXTRA_MAKE_BIT(2,10),
-    GRALLOC_EXTRA_BIT_CM_I420_10BIT     = GRALLOC_EXTRA_MAKE_BIT(2,11),
-    GRALLOC_EXTRA_BIT_CM_YUV420_FLEX_10BIT      = GRALLOC_EXTRA_MAKE_BIT(2,12),
-    GRALLOC_EXTRA_BIT_CM_NV12_BLK_10BIT_H       = GRALLOC_EXTRA_MAKE_BIT(2,13),
-    GRALLOC_EXTRA_BIT_CM_NV12_BLK_10BIT_V       = GRALLOC_EXTRA_MAKE_BIT(2,14),
-    GRALLOC_EXTRA_BIT_CM_UFO_10BIT_H    = GRALLOC_EXTRA_MAKE_BIT(2,15),
-    GRALLOC_EXTRA_BIT_CM_UFO_10BIT_V    = GRALLOC_EXTRA_MAKE_BIT(2,16),
-    GRALLOC_EXTRA_BIT_CM_NV12_PRIVATE_10BIT     = GRALLOC_EXTRA_MAKE_BIT(2,17),
-    GRALLOC_EXTRA_MASK_CM               = GRALLOC_EXTRA_MAKE_MASK(2,6),
+    /* ClearMotion: bit 4~6 */
+    GRALLOC_EXTRA_BIT_CM_YV12           = GRALLOC_EXTRA_MAKE_BIT(4,0),
+    GRALLOC_EXTRA_BIT_CM_NV12_BLK       = GRALLOC_EXTRA_MAKE_BIT(4,1),
+    GRALLOC_EXTRA_BIT_CM_NV12_BLK_FCM   = GRALLOC_EXTRA_MAKE_BIT(4,2),
+    GRALLOC_EXTRA_BIT_CM_YUYV           = GRALLOC_EXTRA_MAKE_BIT(4,3),
+    GRALLOC_EXTRA_BIT_CM_I420           = GRALLOC_EXTRA_MAKE_BIT(4,4),
+    GRALLOC_EXTRA_BIT_CM_YV12_DI        = GRALLOC_EXTRA_MAKE_BIT(4,5),
+    GRALLOC_EXTRA_BIT_CM_I420_DI        = GRALLOC_EXTRA_MAKE_BIT(4,6),
+    GRALLOC_EXTRA_BIT_CM_UFO            = GRALLOC_EXTRA_MAKE_BIT(4,7),
+    GRALLOC_EXTRA_MASK_CM               = GRALLOC_EXTRA_MAKE_MASK(4,6),
 
     /* Secure switch: bit 7 */
     GRALLOC_EXTRA_BIT_NORMAL            = GRALLOC_EXTRA_MAKE_BIT(7,0),
@@ -173,7 +146,6 @@ enum {
     GRALLOC_EXTRA_BIT_YUV_BT601_FULL    = GRALLOC_EXTRA_MAKE_BIT(29,2),
     GRALLOC_EXTRA_BIT_YUV_BT709_NARROW  = GRALLOC_EXTRA_MAKE_BIT(29,3),
     GRALLOC_EXTRA_BIT_YUV_BT709_FULL    = GRALLOC_EXTRA_MAKE_BIT(29,4),
-    GRALLOC_EXTRA_BIT_YUV_BT2020_NARROW = GRALLOC_EXTRA_MAKE_BIT(29,5),
     GRALLOC_EXTRA_MASK_YUV_COLORSPACE   = GRALLOC_EXTRA_MAKE_MASK(29,31),
 };
 
@@ -183,18 +155,6 @@ enum {
     GRALLOC_EXTRA_BIT2_LAYER_NORMAL      = 0x0,
     GRALLOC_EXTRA_BIT2_LAYER_NAV         = 0x1, // Navigation bar
     GRALLOC_EXTRA_MASK2_LAYER_TYPE       = GRALLOC_EXTRA_MAKE_MASK(0,2),
-
-    /* YUY2 for Camera Rotation : bit 3~5 */
-    GRALLOC_EXTRA_BIT2_YUY2_ROT0            = GRALLOC_EXTRA_MAKE_BIT(3,0),
-    GRALLOC_EXTRA_BIT2_YUY2_R1_FLIP_H      = GRALLOC_EXTRA_MAKE_BIT(3,1),    
-    GRALLOC_EXTRA_BIT2_YUY2_R2_FLIP_V      = GRALLOC_EXTRA_MAKE_BIT(3,2),    
-    GRALLOC_EXTRA_BIT2_YUY2_R3_ROT180      = GRALLOC_EXTRA_MAKE_BIT(3,3),
-    GRALLOC_EXTRA_BIT2_YUY2_R4_ROT90       = GRALLOC_EXTRA_MAKE_BIT(3,4),
-    GRALLOC_EXTRA_BIT2_YUY2_R5              = GRALLOC_EXTRA_MAKE_BIT(3,5),
-    GRALLOC_EXTRA_BIT2_YUY2_R6              = GRALLOC_EXTRA_MAKE_BIT(3,6),
-    GRALLOC_EXTRA_BIT2_YUY2_R7_ROT270      = GRALLOC_EXTRA_MAKE_BIT(3,7),
-    GRALLOC_EXTRA_MASK2_YUY2_ROT            = GRALLOC_EXTRA_MAKE_MASK(3,5),
-    
 };
 
 typedef enum {
@@ -240,30 +200,8 @@ typedef struct gralloc_extra_ion_sf_info_t {
     /* buffer flags, please change this value by sf_set_status2() */
     int32_t status2;
 
-    /* video buffer status
-       bit 31: valid bit, 0 = invalid (default), 1 = valid
-
-       bit 30-25: Y stride alignment
-       bit 24-19: CbCr stride alignment
-       bit 18-13: height alignment
-       alignment interpretation
-
-       Y:
-       y_align = (videobuffer_status & 0x7FFFFFFF) >> 25;
-       if (0 == y_align) y_align = 1;
-       else y_align *= 2;
-       CbCr:
-       cbcr_align = (videobuffer_status & 0x01FFFFFF) >> 19;
-       if (0 == cbcr_align) cbcr_align = 1;
-       else cbcr_align *= 2;
-       Height:
-       h_align = (videobuffer_status & 0x0007FFFF) >> 13;
-       if (0 == h_align) h_align = 1;
-       else h_align *= 2;
-
-       bit 12: deinterlace 0 = no, 1 = yes
-    */
-    int32_t videobuffer_status;
+    /* reserved data */
+    int32_t reserved;
 
 #ifdef __cplusplus
     gralloc_extra_ion_sf_info_t():
@@ -307,7 +245,7 @@ typedef struct gralloc_gpu_compression_info_t {
     //unsigned char ufo_is_linear;
     unsigned int ufo_length_buffer_base;
     unsigned char ufo_pattern_replace_en;
-    unsigned int ufo_pattern;
+    unsigned int ufo_pattern[4];
 } gralloc_gpu_compression_info_t;
 
 /* Deprecated methods and struct. START */
