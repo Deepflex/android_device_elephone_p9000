@@ -38,7 +38,7 @@ ARCH_ARM_HAVE_VFP := true
 TARGET_BOOTLOADER_BOARD_NAME := mt6755
 
 #Use dlmalloc instead of jemalloc for mallocs
-#MALLOC_IMPL := dlmalloc
+MALLOC_IMPL := dlmalloc
 
 
 # Kernel
