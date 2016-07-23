@@ -1,4 +1,25 @@
-CM13.0 Device tree For Elephone P9000 MT6755
+Elephone P9000
+==============
+
+The Elephone P9000 (codenamed _"P9000"_) is a mid-range smartphone from Elephone.
+
+It was announced on 25 December 2015.
+
+P9000 is support now by CyanogenMod 13.0
+
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | 2.0GHz Octa-Core MT6755
+GPU     | Mali-T860
+Memory  | 4GB RAM
+Shipped Android Version | 6.0
+Storage | 32GB
+Battery | 3000 mAh
+Display | 5.5" 1920 x 1080 px
+Camera  | 13MPx, LED Flash
+
+
+This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROMS.
 
 Thx to: CyanogenMod team, Wuxianlin, Xen0n
 
