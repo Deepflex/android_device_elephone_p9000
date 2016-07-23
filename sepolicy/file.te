@@ -205,3 +205,8 @@ type fuseblk,sdcard_type,fs_type,mlstrustedobject;
 #ipoh data file
 type ipoh_data_file, file_type, data_file_type;
 
+# Vibrator
+type sysfs_vibrator, fs_type, sysfs_type;
+
+# Display calibration
+type display_sysfs, sysfs_type, file_type;
