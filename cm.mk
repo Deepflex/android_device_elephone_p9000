@@ -17,9 +17,6 @@
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-# Release name
-PRODUCT_RELEASE_NAME := p9000
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
@@ -37,8 +34,9 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier
-PRODUCT_DEVICE := p9000
-PRODUCT_NAME := cm_p9000
 PRODUCT_BRAND := Elephone
-PRODUCT_MODEL := P9000
+PRODUCT_DEVICE := p9000
 PRODUCT_MANUFACTURER := Elephone
+PRODUCT_MODEL := P9000
+PRODUCT_NAME := cm_p9000
+PRODUCT_RELEASE_NAME := p9000
