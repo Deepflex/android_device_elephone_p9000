@@ -5,7 +5,6 @@
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
-
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0
 # MTK, Infinity, 20090720 }
@@ -21,24 +20,17 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 # MTK, mtk03034 20101213}
 
-
-#
 wifi.tethering.interface=ap0
-#
+wifi.direct.interface=p2p0
 
 ro.opengles.version=196608
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-
-wifi.direct.interface=p2p0
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp,mass_storage
 
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
-
-ro.sys.usb.storage.type=mtp,mass_storage
 
 # USB BICR function
 ro.sys.usb.bicr=yes
@@ -46,24 +38,19 @@ ro.sys.usb.bicr=yes
 # USB Charge only function
 ro.sys.usb.charging.only=yes
 
-# audio
+# Audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
 
 ro.zygote.preload.enable=0
 
-# temporary enables NAV bar (soft keys)
+# Temporary enables NAV bar (soft keys)
 qemu.hw.mainkeys=0
 
 ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-#ro.boot.selinux=disable
-
-
 ro.sf.lcd_density=480
 
-# performance
+# Performance
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
