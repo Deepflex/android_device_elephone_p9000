@@ -489,9 +489,3 @@
 
 #fat on nand image
 /fat(/.*)?  u:object_r:fon_image_data_file:s0
-
-# Vibrator
-/sys/devices/virtual/timed_output/vibrator/level      u:object_r:sysfs_vibrator:s0
-
-# Display calibration
-/sys/devices/virtual/graphics/fb0/rgb           u:object_r:display_sysfs:s0

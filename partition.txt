@@ -1,6 +1,6 @@
 deepflex@deepflex-all-series:~/cm13/device/elephone/p9000$ adb shell su -c "ls -l /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/"
-boot -> /dev/block/mmcblk0p20 16384x1024=16777216
-cache -> /dev/block/mmcblk0p27 442368x1024=452984832
+boot -> /dev/block/mmcblk0p20
+cache -> /dev/block/mmcblk0p27
 expdb -> /dev/block/mmcblk0p3
 flashinfo -> /dev/block/mmcblk0p29
 frp -> /dev/block/mmcblk0p4
@@ -21,13 +21,13 @@ ppl -> /dev/block/mmcblk0p5
 proinfo -> /dev/block/mmcblk0p12
 protect1 -> /dev/block/mmcblk0p8
 protect2 -> /dev/block/mmcblk0p9
-recovery -> /dev/block/mmcblk0p1 16384x1024=16777216
+recovery -> /dev/block/mmcblk0p1
 seccfg -> /dev/block/mmcblk0p10
 secro -> /dev/block/mmcblk0p24
-system -> /dev/block/mmcblk0p26 2621440x1024=2684354560
+system -> /dev/block/mmcblk0p26
 tee1 -> /dev/block/mmcblk0p22
 tee2 -> /dev/block/mmcblk0p23
-userdata -> /dev/block/mmcblk0p28 27226095x1024=27879521280
+userdata -> /dev/block/mmcblk0p28
 
 deepflex@deepflex-all-series:~/cm13/device/elephone/p9000$ adb shell cat /proc/partitions
 major minor  #blocks  name

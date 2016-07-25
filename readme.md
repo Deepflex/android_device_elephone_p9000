@@ -5,7 +5,7 @@ The Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone.
 
 It was announced on 25 December 2015.
 
-Now P9000 supporting CyanogenMod 13.0
+Now P9000 supporting CyanogenMod 13.0, how to build and etc you find in file with name "manual"
 
 Basic   | Spec Sheet
 -------:|:-------------------------

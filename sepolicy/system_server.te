@@ -263,7 +263,3 @@ allow system_server nvram_agent_service:service_manager find;
 # Purpose : allow system_server to find mw_blacklist
 # Package: com.mediatek.multiwindow.service
 allow system_server mtk_mwblacklist_service:service_manager find;
-
-# Hardware tunables
-allow system_server sysfs_vibrator:file rw_file_perms;
-allow system_server display_sysfs:file rw_file_perms;
