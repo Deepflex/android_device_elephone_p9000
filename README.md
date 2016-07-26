@@ -35,7 +35,5 @@ To build:
 
 lunch omni_p9000-userdebug
 
-make clean
-
-mka recoveryimage
+make clean && make -j5 recoveryimage
 ```
