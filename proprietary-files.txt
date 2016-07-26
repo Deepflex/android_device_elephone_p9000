@@ -486,6 +486,7 @@ lib/libdngop.so
 lib/libdpframework.so
 lib/libdrmmtkutil.so
 lib/libdrmmtkwhitelist.so
+lib/libDR.so
 lib/libeffect.facebeautypp.so
 lib/libeffecthal.base.so
 lib/libeffecthal.JPG.so
@@ -503,6 +504,7 @@ lib/libfeatureio.so
 lib/libfgauge.so
 lib/libfile_op.so
 lib/libfmcust.so
+lib/libfusion.so
 lib/libgas.so
 lib/libged.so
 lib/libgem.so
@@ -534,6 +536,8 @@ lib/libmmprofile.so
 lib/libmmsdkservice.so
 lib/libmnl.so
 lib/libmp4enc_sa.ca7.so
+lib/libmpe.driver.so
+lib/libmpe.sensorlistener.so
 lib/libmrdump.so
 lib/libmsbc_mtk.so
 lib/libm.so
