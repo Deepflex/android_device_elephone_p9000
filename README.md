@@ -28,3 +28,14 @@ This branch is for building Twrp or Omni ROM (or Android Marshmallow 6.0 AOSP ba
  * Leskal
  * JonnyXDA
  * olegsvs
+
+To build: 
+```
+. build/envsetup.sh
+
+lunch omni_p9000-userdebug
+
+make clean
+
+mka recoveryimage
+```

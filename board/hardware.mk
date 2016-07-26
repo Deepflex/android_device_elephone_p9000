@@ -1,9 +1,3 @@
-# CM hardware
-#BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
-
-# LightHAL
-TARGET_PROVIDES_LIBLIGHT := true
-
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
