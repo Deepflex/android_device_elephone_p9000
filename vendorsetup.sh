@@ -21,5 +21,9 @@
 # function: add_lunch_combo generic-eng
 
 for var in eng user userdebug; do
+<<<<<<< HEAD
   add_lunch_combo omni_p9000-$var
+=======
+  add_lunch_combo cm_p9000-$var
+>>>>>>> 5083064bddadf5b866bb7e75f2f89095aa9c1900
 done
