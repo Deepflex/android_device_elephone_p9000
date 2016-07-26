@@ -46,9 +46,6 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
-# Enable Minikin text layout engine (will be the default soon)
-USE_MINIKIN := true
-
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
