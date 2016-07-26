@@ -37,5 +37,3 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Vendor product configurations
 $(call inherit-product-if-exists, vendor/elephone/p9000/p9000-vendor.mk)
-
-
