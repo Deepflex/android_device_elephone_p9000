@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2011 The Android Open Source Project
 # Copyright (C) 2015-2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,12 +15,6 @@
 # limitations under the License.
 #
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_p9000.mk)
 
@@ -28,10 +23,13 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier
-PRODUCT_BRAND := Elephone
 PRODUCT_DEVICE := p9000
-PRODUCT_MANUFACTURER := Elephone
+PRODUCT_NAME := omni_p9000
+PRODUCT_BRAND := Elephone
 PRODUCT_MODEL := P9000
-PRODUCT_NAME := cm_p9000
+PRODUCT_MANUFACTURER := Elephone
 PRODUCT_RELEASE_NAME := p9000
 
+# Prebuilts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts:kernel

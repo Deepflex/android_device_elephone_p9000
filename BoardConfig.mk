@@ -46,9 +46,6 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
-# Enable Minikin text layout engine (will be the default soon)
-USE_MINIKIN := true
-
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
@@ -60,3 +57,25 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/11270000.usb3/musb-hdrc/gadget/lun%d/file
+
+# Kernel properties
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilts/kernel
+
+# TWRP
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness/
+TW_DEFAULT_BRIGHTNESS := 51
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_FLASH_FROM_STORAGE := true
+TW_INCLUDE_CRYPTO := true
+TW_MAX_BRIGHTNESS := 255
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_NEW_ION_HEAP := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TWHAVE_SELINUX := true
+TW_THEME := portrait_hdpi

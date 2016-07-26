@@ -160,6 +160,17 @@ on post-fs-data
     mkdir /data/mpe_mnl 0771 gps system
     chown gps system /data/mpe_mnl
     chmod 0775 /system/xbin/MPED
+    chown gps:gps /dev/stpgps
+    chown gps:gps /sys/class/gpsdrv/gps/pwrctl
+    chown gps:gps /sys/class/gpsdrv/gps/suspend
+    chown gps:gps /sys/class/gpsdrv/gps/state
+    chown gps:gps /sys/class/gpsdrv/gps/pwrsave
+    chown gps:gps /sys/class/gpsdrv/gps/status
+    chmod 0660 /dev/stpgps
+  
+# ANT
+    chmod 0660 /dev/stpant
+    chown system:system /dev/stpant
 
     # NFC
     mkdir /data/nfc_socket 0771 nfc radio
@@ -475,10 +486,6 @@ on post-fs-data
 
     chmod 0660 /d/dispsys
     chown system graphics /d/dispsys
-    
-    # Display calibration
-    chown system system /sys/devices/virtual/graphics/fb0/rgb
-    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
 
     # EM baseband file
     chown root diag /system/bin/baseband_regdump
@@ -532,6 +539,8 @@ on post-fs-data
     chown bluetooth bluetooth /data/@btmtk/dev_cache
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
+    chmod 0660 /dev/stpbt
+    chown bluetooth:radio /dev/stpbt
     #Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
