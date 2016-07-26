@@ -28,9 +28,12 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * WiFi
  * Vibration
  * Audio
+ * Auto brightness
+ * Doze
  * Rotation
  * All sensors
  * NFC
+ * Lazer autofocus
  * Bluetooth
  * Camera (Video and Photos)
  * External SD
@@ -44,6 +47,7 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
 ## Not working (yet):
  * Tethering
  * Gps
+ * Hdr in camera app
  * Memory deffect (Settings/memory - no information - it is a reason why after reboot not loading widgets and recent's non working)
 
 ## Thanks to:
