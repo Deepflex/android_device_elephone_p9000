@@ -1,5 +1,0 @@
-This is patch directory
-
-cd WORKING_DIR
-sh device/elephone/p9000/patches/install.sh
-sh device/elephone/p9000/patches/uninstall.sh
