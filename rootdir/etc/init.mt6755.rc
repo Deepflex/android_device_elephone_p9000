@@ -475,10 +475,6 @@ on post-fs-data
 
     chmod 0660 /d/dispsys
     chown system graphics /d/dispsys
-    
-    # Display calibration
-    chown system system /sys/devices/virtual/graphics/fb0/rgb
-    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
 
     # EM baseband file
     chown root diag /system/bin/baseband_regdump
