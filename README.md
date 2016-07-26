@@ -31,6 +31,10 @@ This branch is for building Twrp or Omni ROM (or Android Marshmallow 6.0 AOSP ba
 
 To build: 
 ```
+repo init -u git://github.com/lj50036/platform_manifest_twrp_omni.git -b twrp-6.0
+
+repo sync
+
 . build/envsetup.sh
 
 lunch omni_p9000-userdebug
