@@ -22,5 +22,4 @@
 
 for var in eng user userdebug; do
   add_lunch_combo cm_p9000-$var
-  add_lunch_combo omni_p9000-$var
 done
