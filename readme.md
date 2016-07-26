@@ -56,4 +56,4 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * Xen0n
  * Leskal
  * JonnyXDA
-
+ * olegsvs
