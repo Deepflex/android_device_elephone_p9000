@@ -528,8 +528,6 @@ on post-fs-data
     chown bluetooth bluetooth /data/@btmtk/dev_cache
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
-    chmod 0660 /dev/stpbt
-    chown bluetooth:radio /dev/stpbt
     #Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
