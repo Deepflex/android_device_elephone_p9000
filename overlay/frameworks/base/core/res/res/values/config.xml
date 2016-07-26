@@ -309,6 +309,12 @@
 
     <!-- Enable doze powersaving -->
     <bool name="config_enableAutoPowerModes">true</bool>
+    
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">3</integer>
+
+    <!--  Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
 
     <!-- Older rotation sensors are not setting event.timestamp correctly. Setting to
     true will use SystemClock.elapsedRealtimeNanos() to set timestamp. -->
