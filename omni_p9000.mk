@@ -30,6 +30,10 @@ PRODUCT_MODEL := P9000
 PRODUCT_MANUFACTURER := Elephone
 PRODUCT_RELEASE_NAME := p9000
 
+# Prebuilts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts:kernel
+
 # TWRP.fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
