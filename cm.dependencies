@@ -1,6 +1,6 @@
 [
   {
-    "remote": "github"
+    "remote": "github",
     "repository": "Deepflex/android_vendor_elephone_p9000",
     "target_path": "vendor/elephone/p9000",
     "branch": "master"
