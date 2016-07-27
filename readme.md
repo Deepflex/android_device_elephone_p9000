@@ -5,7 +5,9 @@ The Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone.
 
 It was announced on 25 December 2015.
 
-Now P9000 supporting CyanogenMod 13.0, how to build and etc you find in file with name "manual"
+Now P9000 supporting CyanogenMod 13.0
+
+For more information about building read "manual"
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -15,7 +17,7 @@ Memory  | 4GB RAM
 Shipped Android Version | 6.0
 Storage | 32GB
 Battery | 3000 mAh
-Display | 5.5" 1920 x 1080 px
+Display | 5.5" 1920 x 1080 px DPI 480
 Rear Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
 Front Camera | 8MP (OV)
 
@@ -35,7 +37,7 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * NFC
  * Lazer autofocus
  * Bluetooth
- * Camera (Video and Photos)
+ * Camera rear/front (Video and Photos)
  * External SD
  * RIL for SMS/Calls/Internet/Lte on 1 and 2 SIM
  * MTP and Mass Storage mode
@@ -56,4 +58,3 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * Xen0n
  * Leskal
  * JonnyXDA
- * olegsvs
