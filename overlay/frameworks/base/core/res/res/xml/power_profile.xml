@@ -14,7 +14,7 @@
     <item name="camera.avg">0.1</item>
     <item name="radio.active">200</item>
     <item name="radio.scanning">10</item>
-    <item name="gps.on">50</item>
+    <item name="gps.on">30</item>
     <array name="radio.on">
         <value>2</value>
         <value>1</value>
