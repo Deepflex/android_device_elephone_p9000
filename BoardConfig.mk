@@ -79,3 +79,4 @@ TW_NEW_ION_HEAP := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TWHAVE_SELINUX := true
 TW_THEME := portrait_hdpi
+TW_EXCLUDE_SUPERSU := true
