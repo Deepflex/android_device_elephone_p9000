@@ -34,7 +34,7 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * Doze
  * Rotation
  * All sensors
- * NFC
+ * NFC (Payments, pairing)
  * Lazer autofocus
  * Bluetooth
  * Camera rear/front (Video and Photos)
