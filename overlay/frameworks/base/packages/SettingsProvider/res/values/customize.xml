@@ -12,7 +12,6 @@
      limitations under the License.
 -->
 <resources>
-
     <!-- Default for Settings.Global.MOBILE_DATA -->
     <bool name="def_enable_mobile_data" translatable="false">false</bool>
 </resources>
