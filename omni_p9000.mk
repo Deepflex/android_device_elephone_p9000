@@ -15,6 +15,15 @@
 # limitations under the License.
 #
 
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/cdma.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_p9000.mk)
 
@@ -33,3 +42,7 @@ PRODUCT_RELEASE_NAME := P9000
 # TWRP.fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/recovery.fstab
+
+# Time Zone data for Recovery
+PRODUCT_COPY_FILES += \
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
