@@ -30,9 +30,7 @@ include $(LOCAL_PATH)/board/*.mk
 #######################################################################
 
 # Kernel
-
 TARGET_KMODULES := true
-
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # Disable memcpy opt (for audio libraries)
@@ -57,22 +55,3 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/11270000.usb3/musb-hdrc/gadget/lun%d/file
-
-# TWRP
-BOARD_SUPPRESS_SECURE_ERASE := true
-RECOVERY_SDCARD_ON_DATA := true
-TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6755.rc
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
-TW_DEFAULT_BRIGHTNESS := 50
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_FLASH_FROM_STORAGE := true
-TW_INCLUDE_CRYPTO := true
-TW_MAX_BRIGHTNESS := 255
-TW_NEW_ION_HEAP := true
-TWHAVE_SELINUX := true
-TW_THEME := portrait_hdpi
-TW_EXCLUDE_SUPERSU := true
-TW_MTP_DEVICE := "Elephone P9000"
-TW_EXTRA_LANGUAGES := true
