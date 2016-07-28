@@ -153,33 +153,15 @@ on post-fs-data
 
     mkdir /data/drm/wv 0770 drm system
 
-    # GPS
+# GPS
     mkdir /data/gps_mnl 0771 gps system
     mkdir /data/misc/gps 0770 gps system
     mkdir /data/mpe_mnl 0771 gps system
     chown gps system /data/mpe_mnl
     chmod 0775 /system/xbin/MPED
-	
-    # GPS #2
-    chmod 0660 /dev/gps
-    chown system gps /dev/gps
-    chmod 0660 /dev/stpgps
-    chown gps gps /dev/stpgps
-
-    chmod 0660 /dev/ttyC2
-    chown system gps /dev/ttyC2
 
     # NFC
     mkdir /data/nfc_socket 0771 nfc radio
-	
-    # Wi-Fi
-    exec /system/xbin/mknod /dev/wmtWifi c 153 0
-    chmod 0660 /dev/wmtWifi
-    chown system system /dev/wmtWifi
-
-    exec /system/xbin/mknod /dev/stpwmt c 190 0
-    exec /system/xbin/mknod /dev/stpgps c 191 0
-    exec /system/xbin/mknod /dev/stpbt  c 192 0
 
 # -----------------------
 # Add by MTK
