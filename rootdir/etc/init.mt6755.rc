@@ -19,7 +19,6 @@ import init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 
 on early-init
-    mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
 on init
