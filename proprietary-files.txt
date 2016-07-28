@@ -168,7 +168,6 @@ etc\bluetooth\bt_did.conf
 etc\bluetooth\bt_stack.conf
 etc\clatd.conf
 etc\custom.conf
-etc\dhcpcd\dhcpcd-hooks
 etc\dhcpcd\dhcpcd-hooks\20-dns.conf
 etc\dhcpcd\dhcpcd-hooks\95-configured
 etc\dhcpcd\dhcpcd-run-hooks
@@ -179,7 +178,6 @@ etc\firmware\WMT_SOC.cfg
 etc\firmware\catcher_filter_1_ulwctg_n.bin
 etc\firmware\dsp_1_ulwctg_n.bin
 etc\firmware\modem_1_ulwctg_n.img
-etc\firmware\mt6627
 etc\firmware\mt6627\mt6627_fm_v1_coeff.bin
 etc\firmware\mt6627\mt6627_fm_v1_patch.bin
 etc\firmware\mt6627\mt6627_fm_v2_coeff.bin
@@ -200,8 +198,6 @@ etc\firmware\pcm_suspend_by_mp1.bin
 etc\fmr\mt6627_fm_cust.cfg
 etc\mtk_omx_core.cfg
 etc\mtklog-config.prop
-etc\nfc_conformance\DTA_Config
-etc\nfc_conformance\DTA_Config\AT4
 etc\nfc_conformance\DTA_Config\AT4\listen_config.txt
 etc\nfc_conformance\DTA_Config\AT4\listen_polling.txt
 etc\nfc_conformance\DTA_Config\AT4\p2p_config.txt
@@ -210,7 +206,6 @@ etc\nfc_conformance\DTA_Config\AT4\platform_config.txt
 etc\nfc_conformance\DTA_Config\AT4\platform_config_tagOp.txt
 etc\nfc_conformance\DTA_Config\AT4\platform_polling.txt
 etc\nfc_conformance\DTA_Config\AT4\platform_polling_tagOp.txt
-etc\nfc_conformance\DTA_Config\Clear2Pay
 etc\nfc_conformance\DTA_Config\Clear2Pay\listen_config.txt
 etc\nfc_conformance\DTA_Config\Clear2Pay\listen_polling.txt
 etc\nfc_conformance\DTA_Config\Clear2Pay\p2p_config.txt
@@ -219,7 +214,6 @@ etc\nfc_conformance\DTA_Config\Clear2Pay\platform_config.txt
 etc\nfc_conformance\DTA_Config\Clear2Pay\platform_config_tagOp.txt
 etc\nfc_conformance\DTA_Config\Clear2Pay\platform_polling.txt
 etc\nfc_conformance\DTA_Config\Clear2Pay\platform_polling_tagOp.txt
-etc\nfc_conformance\DTA_Config\Comprion
 etc\nfc_conformance\DTA_Config\Comprion\listen_config.txt
 etc\nfc_conformance\DTA_Config\Comprion\listen_polling.txt
 etc\nfc_conformance\DTA_Config\Comprion\p2p_config.txt
@@ -228,7 +222,6 @@ etc\nfc_conformance\DTA_Config\Comprion\platform_config.txt
 etc\nfc_conformance\DTA_Config\Comprion\platform_config_tagOp.txt
 etc\nfc_conformance\DTA_Config\Comprion\platform_polling.txt
 etc\nfc_conformance\DTA_Config\Comprion\platform_polling_tagOp.txt
-etc\nfc_conformance\DTA_Config\Others
 etc\nfc_conformance\DTA_Config\Others\listen_config.txt
 etc\nfc_conformance\DTA_Config\Others\listen_polling.txt
 etc\nfc_conformance\DTA_Config\Others\p2p_config.txt
