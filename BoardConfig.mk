@@ -30,9 +30,7 @@ include $(LOCAL_PATH)/board/*.mk
 #######################################################################
 
 # Kernel
-
 TARGET_KMODULES := true
-
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # Disable memcpy opt (for audio libraries)
