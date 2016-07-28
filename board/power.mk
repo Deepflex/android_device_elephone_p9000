@@ -1,2 +1,3 @@
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
+BOARD_CHARGER_RES := $(LOCAL_PATH)/images/charger
