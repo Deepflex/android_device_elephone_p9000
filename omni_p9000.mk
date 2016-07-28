@@ -32,7 +32,7 @@ PRODUCT_RELEASE_NAME := p9000
 
 # Prebuilts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts:kernel
+    $(LOCAL_PATH)/prebuilts:zImage
 
 # TWRP.fstab
 PRODUCT_COPY_FILES += \
