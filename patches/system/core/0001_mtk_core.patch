@@ -1,3 +1,4 @@
+
 commit 7ef8cece66431b140a6b6263bb42fd8244b69c7c
 Author: Deepflex <hqdevnews@gmail.com>
 Date:   Mon Jul 25 21:34:32 2016 +0700
@@ -36,8 +37,4 @@ index 58d7d34..7fa4d75 100644
 +static const char *ENV[64];
  
  bool waiting_for_exec = false;
-
-diff --git a/sdcard/sdcard.c b/sdcard/sdcard.c
-index 5309bbd..98af250 100644
---- a/sdcard/sdcard.c
-+++ b/sdcard/sdcard.c
+ 
