@@ -36,3 +36,8 @@ index 58d7d34..7fa4d75 100644
 +static const char *ENV[64];
  
  bool waiting_for_exec = false;
+
+diff --git a/sdcard/sdcard.c b/sdcard/sdcard.c
+index 5309bbd..98af250 100644
+--- a/sdcard/sdcard.c
++++ b/sdcard/sdcard.c
