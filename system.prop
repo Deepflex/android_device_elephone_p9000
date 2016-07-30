@@ -194,4 +194,4 @@ persist.datashaping.alarmgroup=1
 ro.mtk_modem_monitor_support=1
 
 # Storage
-ro.sdcardfs.enable=true
+ro.sdcardfs.enable=false
