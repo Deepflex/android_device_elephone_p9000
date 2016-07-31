@@ -13,5 +13,4 @@ TW_NEW_ION_HEAP := true
 TWHAVE_SELINUX := true
 TW_THEME := portrait_hdpi
 TW_EXCLUDE_SUPERSU := true
-TW_MTP_DEVICE := "Elephone P9000"
 TW_EXTRA_LANGUAGES := true
