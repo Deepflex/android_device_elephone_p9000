@@ -24,11 +24,8 @@ index b05118e..ab6fa5f 100755
  #endif
  
  #ifdef LIBWPA_CLIENT_EXISTS
-+#ifdef MTK_HARDWARE
+-static const char HOSTAPD_UNIX_FILE[]    = "/data/misc/wifi/hostapd/wlan0";
 +static const char HOSTAPD_UNIX_FILE[]    = "/data/misc/wifi/hostapd/ap0";
-+#else
- static const char HOSTAPD_UNIX_FILE[]    = "/data/misc/wifi/hostapd/wlan0";
-+#endif
  static const char HOSTAPD_SOCKETS_DIR[]    = "/data/misc/wifi/sockets";
  static const char HOSTAPD_DHCP_DIR[]    = "/data/misc/dhcp";
  #endif
