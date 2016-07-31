@@ -192,3 +192,11 @@ ro.mtk_deinterlace_support=1
 persist.mtk.datashaping.support=1
 persist.datashaping.alarmgroup=1
 ro.mtk_modem_monitor_support=1
+
+# hardware info
+ro.device.chipset= MediaTek MT6755 Helio P10
+ro.device.cpu= Octa-core 2.0 GHz
+ro.device.gpu=ARM Mali-T860
+ro.device.rear_cam=13 MP
+ro.device.front_cam=8 MP
+ro.device.screen_res=1080X1920
