@@ -1,10 +1,10 @@
-commit 742c9942672ed66971e025159d6ee8000d683aa0
+commit 0b8cf51154d9784eacde862801d47afcf8197165
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Jul 25 21:20:17 2016 +0700
+Date:   Mon Aug 1 16:57:54 2016 +0700
 
-    mtk audio
+    mtk audio patch
     
-    Change-Id: I8c2841237be0a97b5f79b4c1224f5ab9ceb951ab
+    Change-Id: I80262afc551f942ba08a8450a549339f5194ae3d
 
 diff --git a/media/libmedia/Android.mk b/media/libmedia/Android.mk
 index efcd541..d307afc 100644

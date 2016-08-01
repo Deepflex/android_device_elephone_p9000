@@ -17,9 +17,6 @@
 # Device path
 LOCAL_PATH := device/elephone/p9000
 
-# Device headers
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
-
 # Device board elements
 include $(LOCAL_PATH)/PlatformConfig.mk
 include $(LOCAL_PATH)/board/*.mk

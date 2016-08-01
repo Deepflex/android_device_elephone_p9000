@@ -1,24 +1,11 @@
-commit aa9c4f1d68f4b47e96212b13883ac346dd687878
+commit ac8969e51b83884cdc417ec3e3b2294e81be26e0
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Jul 25 21:30:28 2016 +0700
+Date:   Mon Aug 1 18:31:26 2016 +0700
 
     mtk services Telecomm
     
-    Change-Id: Ifb5bc63f35ae312ba2568ebf14133d810a73a46b
+    Change-Id: Id1d24e2cf5fd898ed42436ed2241fe2dcd1afb30
 
-diff --git a/res/values-ja/cm_strings.xml b/res/values-ja/cm_strings.xml
-index 7e91d34..6afc84d 100644
---- a/res/values-ja/cm_strings.xml
-+++ b/res/values-ja/cm_strings.xml
-@@ -19,7 +19,7 @@
-   <!-- Blacklist preferences -->
-   <string name="blacklist_title">着信拒否リスト</string>
-   <string name="blacklist_summary_disabled">無効</string>
--  <string name="blacklist_summary">着信拒否リストにある電話番号からの着信やメッセージを受け取らないようにする</string>
-+  <string name="blacklist_summary">着信拒否リストにある電話番号からの着信やメッセージを受け取らないようにします</string>
-   <!-- Blacklist notifications -->
-   <string name="blacklist_call_notification">%sからの着信を拒否しました</string>
-   <string name="blacklist_call_notification_private_number">非通知番号からの着信を拒否しました</string>
 diff --git a/src/com/android/server/telecom/ProximitySensorManager.java b/src/com/android/server/telecom/ProximitySensorManager.java
 index 5fddb89..952c8f4 100644
 --- a/src/com/android/server/telecom/ProximitySensorManager.java

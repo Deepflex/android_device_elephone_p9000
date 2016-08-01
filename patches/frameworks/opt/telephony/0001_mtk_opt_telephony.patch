@@ -1,10 +1,10 @@
-commit a63283b9533a05950fa5b8f09aeaa8ec14d06dc3
+commit d77f77350a654184c3e46bd327bd75204ca02f9c
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Jul 25 21:16:03 2016 +0700
+Date:   Mon Aug 1 18:27:04 2016 +0700
 
-    mtk_opt_telephony
+    mtk opt telephony
     
-    Change-Id: If48e6c31ee4405b1a3778f260db0be49281106c2
+    Change-Id: Id84dddd033f4eed92a1c778ff623df0b299f66fe
 
 diff --git a/src/java/com/android/internal/telephony/BaseCommands.java b/src/java/com/android/internal/telephony/BaseCommands.java
 index c586087..ee2badd 100644

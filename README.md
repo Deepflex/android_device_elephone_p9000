@@ -23,15 +23,17 @@ Front Camera | 8MP (OV)
 
 ![Elephone P9000](http://www.pixic.ru/i/p0Y19177m022b1u5.png "Elephone P9000 in black")
 
-This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROM.
+This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROM.
 
 ## Working:
  * It is boots and hardware accelerated!
  * WiFi
+ * GPS
  * Vibration
  * Audio
  * Auto brightness
  * Doze
+ * RAM and ROM
  * Rotation
  * All sensors
  * NFC (Payments, pairing)
@@ -47,10 +49,8 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * FM Radio
 
 ## Not working (yet):
- * Tethering
- * Gps
+ * Wi-Fi Tethering
  * Hdr in camera app
- * Memory deffect (Settings/memory - no information - it is a reason why after reboot not loading widgets and recent's non working)
 
 ## Thanks to:
  * CyanogenMod team
@@ -58,3 +58,4 @@ This branch is for building CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP ba
  * Xen0n
  * Leskal
  * JonnyXDA
+ * olegsvs
