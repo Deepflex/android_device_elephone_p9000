@@ -27,6 +27,7 @@ This branch is for building Twrp or Omni ROM (or Android Marshmallow 6.0 AOSP ba
  * Xen0n
  * Leskal
  * JonnyXDA
+ * olegsvs
 
 To build: 
 ```
