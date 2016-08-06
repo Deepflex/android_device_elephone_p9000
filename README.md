@@ -21,7 +21,7 @@ Display | 5.5" 1920 x 1080 px DPI 480
 Rear Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
 Front Camera | 8MP (OV)
 
-![Elephone P9000](http://www.pixic.ru/i/p0Y19177m022b1u5.png "Elephone P9000 in black")
+![Elephone P9000](http://www.elephonestore.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/e/l/elephone_p9000_grey_1_1.jpg "Elephone P9000 in black")
 
 This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROM.
 
