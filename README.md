@@ -28,7 +28,11 @@ This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6
 ## Working:
  * It is boots and hardware accelerated!
  * WiFi
+ * Fast charging
+ * Offline charging
  * GPS
+ * AGPS
+ * ANT (Fitness trackers and etc)
  * Vibration
  * Audio
  * Auto brightness
@@ -38,12 +42,13 @@ This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6
  * All sensors
  * NFC (Payments, pairing)
  * Lazer autofocus
+ * Flashlight (Statusbar and Camera)
  * Bluetooth
  * Camera rear/front (Video and Photos)
  * External SD
  * RIL for SMS/Calls/Internet/Lte on 1 and 2 SIM
  * MTP and Mass Storage mode
- * Audio over Bluetooth
+ * Audio over Bluetooth (Music and etc)
  * Enforcing SELinux
  * Fingerprint Scanner
  * FM Radio
@@ -59,3 +64,4 @@ This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6
  * Leskal
  * JonnyXDA
  * olegsvs
+ * Visi0nary

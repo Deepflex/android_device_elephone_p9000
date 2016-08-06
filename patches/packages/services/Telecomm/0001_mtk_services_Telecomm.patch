@@ -1,11 +1,28 @@
-commit ac8969e51b83884cdc417ec3e3b2294e81be26e0
+commit 0a213744ffd70226ccba7f197838532197758b94
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Aug 1 18:31:26 2016 +0700
+Date:   Sat Aug 6 03:15:54 2016 +0700
 
     mtk services Telecomm
     
-    Change-Id: Id1d24e2cf5fd898ed42436ed2241fe2dcd1afb30
+    Change-Id: I28051c2a2fc64dcc1f0e89571a1de90c14093418
 
+diff --git a/src/com/android/server/telecom/InCallController.java b/src/com/android/server/telecom/InCallController.java
+index f62032a..9e2d66e 100644
+--- a/src/com/android/server/telecom/InCallController.java
++++ b/src/com/android/server/telecom/InCallController.java
+@@ -612,7 +612,11 @@ public final class InCallController extends CallsManagerListenerBase {
+         }
+         properties |= convertConnectionToCallProperties(call.getConnectionProperties());
+ 
+-        if (call.isRespondViaSmsCapable()) {
++        // If this is a single-SIM device, the "default SIM" will always be the only SIM.
++        boolean isDefaultSmsAccount =
++                mCallsManager.getPhoneAccountRegistrar()
++                        .isUserSelectedSmsPhoneAccount(call.getTargetPhoneAccount());
++        if (call.isRespondViaSmsCapable() && isDefaultSmsAccount) {
+             capabilities |= android.telecom.Call.Details.CAPABILITY_RESPOND_VIA_TEXT;
+         }
+ 
 diff --git a/src/com/android/server/telecom/ProximitySensorManager.java b/src/com/android/server/telecom/ProximitySensorManager.java
 index 5fddb89..952c8f4 100644
 --- a/src/com/android/server/telecom/ProximitySensorManager.java

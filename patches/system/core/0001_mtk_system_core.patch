@@ -17,7 +17,7 @@ index 86a4fc6..142537a 100644
 -    props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath) / 1000;
 -
 +    //props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath) / 1000;
-+	props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath); // mt6755
++	props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath); // mt67xx
      props.batteryTemperature = mBatteryFixedTemperature ?
          mBatteryFixedTemperature :
          getIntField(mHealthdConfig->batteryTemperaturePath);
@@ -57,7 +57,7 @@ index 85dfbfc..065f86f 100644
  LOCAL_CFLAGS += -DUMOUNT_AND_FSCK_IS_UNSAFE
  endif
  
-+LOCAL_CFLAGS += -DMTK_MT6755
++LOCAL_CFLAGS += -DMTK_mt67xx
  LOCAL_MODULE:= init
  LOCAL_C_INCLUDES += \
      external/zlib \
@@ -70,7 +70,7 @@ index 58d7d34..81dcad7 100644
          { "ro.boot.baseband",   "ro.baseband",   "unknown", },
          { "ro.boot.bootloader", "ro.bootloader", "unknown", },
 -        { "ro.boot.hardware",   "ro.hardware",   "unknown", },
-+		{ "ro.boot.hardware",   "ro.hardware",   "mt6755", },
++		{ "ro.boot.hardware",   "ro.hardware",   "mt67xx", },
  #ifndef IGNORE_RO_BOOT_REVISION
          { "ro.boot.revision",   "ro.revision",   "0", },
  #endif
@@ -79,7 +79,7 @@ index 58d7d34..81dcad7 100644
  static bool selinux_is_enforcing(void)
  {
 +
-+	return false;  //mt6755
++	return false;  //mt67xx
 +
      if (ALLOW_DISABLE_SELINUX) {
          return selinux_status_from_cmdline() == SELINUX_ENFORCING;
@@ -89,7 +89,7 @@ index 58d7d34..81dcad7 100644
  
      close(f);
 -    return ('1' == cmb);
-+     return ('8' == cmb); //offline charging mt6755
++     return ('8' == cmb); //offline charging mt67xx
  #endif
  }
  

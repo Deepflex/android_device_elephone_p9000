@@ -1,11 +1,175 @@
-commit 307cf0523cfa380fbe2df4359e0ca307417c7c05
+commit a4fffdedd43071a588147a7b50afaa43d7367a27
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Aug 1 18:30:17 2016 +0700
+Date:   Sat Aug 6 03:16:40 2016 +0700
 
     mtk services Telephony
     
-    Change-Id: I117d5675241526f5230d9e73478f910e8aeb49fd
+    Change-Id: Icb31e17f08380ceeca7d2bba18b7db96e74028bc
 
+diff --git a/src/com/android/phone/EditPhoneNumberPreference.java b/src/com/android/phone/EditPhoneNumberPreference.java
+index 676963a..1e1b15b 100644
+--- a/src/com/android/phone/EditPhoneNumberPreference.java
++++ b/src/com/android/phone/EditPhoneNumberPreference.java
+@@ -18,27 +18,22 @@ package com.android.phone;
+ 
+ import android.app.Activity;
+ import android.app.AlertDialog;
+-import android.app.Dialog;
+ import android.content.Context;
+ import android.content.DialogInterface;
+ import android.content.Intent;
+ import android.content.res.TypedArray;
+-import android.os.Bundle;
+ import android.preference.EditTextPreference;
+ import android.provider.ContactsContract.CommonDataKinds.Phone;
+ import android.telephony.PhoneNumberUtils;
+ import android.text.BidiFormatter;
+-import android.text.Editable;
+ import android.text.TextDirectionHeuristics;
+ import android.text.TextUtils;
+-import android.text.TextWatcher;
+ import android.text.method.ArrowKeyMovementMethod;
+ import android.text.method.DialerKeyListener;
+ import android.text.format.DateFormat;
+ import android.util.AttributeSet;
+ import android.view.View;
+ import android.view.ViewGroup;
+-import android.widget.Button;
+ import android.widget.EditText;
+ import android.widget.ImageButton;
+ import android.widget.TextView;
+@@ -264,22 +259,6 @@ public class EditPhoneNumberPreference extends EditTextPreference
+             editText.setMovementMethod(ArrowKeyMovementMethod.getInstance());
+             editText.setKeyListener(DialerKeyListener.getInstance());
+             editText.setOnFocusChangeListener(mDialogFocusChangeListener);
+-            editText.addTextChangedListener(new TextWatcher() {
+-                @Override
+-                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+-                    // Do nothing
+-                }
+-
+-                @Override
+-                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+-                    // Do nothing
+-                }
+-
+-                @Override
+-                public void afterTextChanged(Editable editable) {
+-                    enableDisableButtons();
+-                }
+-            });
+         }
+ 
+         //set contact picker
+@@ -299,23 +278,6 @@ public class EditPhoneNumberPreference extends EditTextPreference
+     }
+ 
+     /**
+-     * Enables or disables buttons depending on if the text field is empty.
+-     */
+-    private void enableDisableButtons() {
+-        EditText editText = getEditText();
+-        AlertDialog dialog = (AlertDialog) getDialog();
+-
+-        if (editText != null && dialog != null){
+-            boolean hasText = editText.getText().length() != 0;
+-            Button onOff = dialog.getButton(DialogInterface.BUTTON_NEUTRAL);
+-            if (!onOff.getText().equals(mDisableText)) {
+-                dialog.getButton(DialogInterface.BUTTON_NEUTRAL).setEnabled(hasText);
+-            }
+-            dialog.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(hasText);
+-        }
+-    }
+-
+-    /**
+      * Overriding EditTextPreference's onAddEditTextToDialogView.
+      *
+      * This method attaches the EditText to the container specific to this
+@@ -408,12 +370,6 @@ public class EditPhoneNumberPreference extends EditTextPreference
+     }
+ 
+     @Override
+-    protected void showDialog(Bundle state) {
+-        super.showDialog(state);
+-        enableDisableButtons();
+-    }
+-
+-    @Override
+     //When the dialog is closed, perform the relevant actions, including setting
+     // phone numbers and calling the close action listener.
+     protected void onDialogClosed(boolean positiveResult) {
+diff --git a/src/com/android/phone/MobileNetworkSettings.java b/src/com/android/phone/MobileNetworkSettings.java
+index 729ac98..2faac45 100755
+--- a/src/com/android/phone/MobileNetworkSettings.java
++++ b/src/com/android/phone/MobileNetworkSettings.java
+@@ -1290,10 +1290,7 @@ public class MobileNetworkSettings extends PreferenceActivity
+     }
+ 
+     private boolean isWorldMode() {
+-        final PersistableBundle carrierConfig =
+-                PhoneGlobals.getInstance().getCarrierConfigForSubId(mPhone.getSubId());
+-
+-        return isWorldMode(this, carrierConfig);
++        return isWorldMode(this);
+     }
+ 
+     private void controlGsmOptions(boolean enable) {
+@@ -1346,31 +1343,21 @@ public class MobileNetworkSettings extends PreferenceActivity
+         return isSupportTdscdma(this, mPhone.getSubId());
+     }
+ 
+-    private static boolean isWorldMode(Context context, PersistableBundle carrierConfig) {
+-        final boolean carrierConfigWorldPhone = carrierConfig.getBoolean(CarrierConfigManager.KEY_WORLD_PHONE_BOOL);
+-
++    private static boolean isWorldMode(Context context) {
+         boolean worldModeOn = false;
+-
+-        // Check the new CarrierConfig version of the flag
+-        if(carrierConfigWorldPhone){
+-            worldModeOn = true;
+-        }
+-        // If its not set, check the old deprecated way...
+-        else {
+-            final TelephonyManager tm = (TelephonyManager)
+-                    context.getSystemService(Context.TELEPHONY_SERVICE);
+-            final String configString = context.getResources().getString(R.string.config_world_mode);
+-
+-            if (!TextUtils.isEmpty(configString)) {
+-                String[] configArray = configString.split(";");
+-                // Check if we have World mode configuration set to True only or config is set to True
+-                // and SIM GID value is also set and matches to the current SIM GID.
+-                if (configArray != null &&
+-                        ((configArray.length == 1 && configArray[0].equalsIgnoreCase("true")) ||
+-                                (configArray.length == 2 && !TextUtils.isEmpty(configArray[1]) &&
+-                                        tm != null && configArray[1].equalsIgnoreCase(tm.getGroupIdLevel1())))) {
+-                    worldModeOn = true;
+-                }
++        final TelephonyManager tm = (TelephonyManager)
++                context.getSystemService(Context.TELEPHONY_SERVICE);
++        final String configString = context.getResources().getString(R.string.config_world_mode);
++
++        if (!TextUtils.isEmpty(configString)) {
++            String[] configArray = configString.split(";");
++            // Check if we have World mode configuration set to True only or config is set to True
++            // and SIM GID value is also set and matches to the current SIM GID.
++            if (configArray != null &&
++                    ((configArray.length == 1 && configArray[0].equalsIgnoreCase("true")) ||
++                            (configArray.length == 2 && !TextUtils.isEmpty(configArray[1]) &&
++                                    tm != null && configArray[1].equalsIgnoreCase(tm.getGroupIdLevel1())))) {
++                worldModeOn = true;
+             }
+         }
+ 
+@@ -1501,8 +1488,7 @@ public class MobileNetworkSettings extends PreferenceActivity
+         } else {
+             throw new IllegalStateException("Unexpected phone type: " + phoneType);
+         }
+-
+-        if (isWorldMode(context, carrierConfig)) {
++        if (isWorldMode(context)) {
+             ev[0] = com.android.phone.R.array.preferred_network_mode_choices_world_mode;
+             ev[1] = com.android.phone.R.array.preferred_network_mode_values_world_mode;
+         }
 diff --git a/src/com/android/phone/PhoneGlobals.java b/src/com/android/phone/PhoneGlobals.java
 index 9c9aaea..784f41f 100644
 --- a/src/com/android/phone/PhoneGlobals.java

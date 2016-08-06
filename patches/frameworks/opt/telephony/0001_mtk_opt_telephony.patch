@@ -1,10 +1,10 @@
-commit d77f77350a654184c3e46bd327bd75204ca02f9c
+commit 387e1f6bd427486cd50edad3c79206b4e56fb455
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Aug 1 18:27:04 2016 +0700
+Date:   Sat Aug 6 03:14:36 2016 +0700
 
     mtk opt telephony
     
-    Change-Id: Id84dddd033f4eed92a1c778ff623df0b299f66fe
+    Change-Id: Ic1025b96742554032e173ca1ace4d17d77dd573e
 
 diff --git a/src/java/com/android/internal/telephony/BaseCommands.java b/src/java/com/android/internal/telephony/BaseCommands.java
 index c586087..ee2badd 100644
@@ -10011,7 +10011,7 @@ index b87b042..c6df26c 100644
 +    }
 +}
 diff --git a/src/java/com/android/internal/telephony/dataconnection/DcTracker.java b/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
-index e1569ae..5beb9b6 100644
+index bd59e52..5beb9b6 100644
 --- a/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
 +++ b/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
 @@ -81,6 +81,10 @@ import com.android.internal.telephony.uicc.UiccController;
@@ -10025,7 +10025,17 @@ index e1569ae..5beb9b6 100644
  import java.io.FileDescriptor;
  import java.io.PrintWriter;
  import java.util.ArrayList;
-@@ -3013,15 +3017,19 @@ public class DcTracker extends DcTrackerBase {
+@@ -1702,9 +1706,6 @@ public class DcTracker extends DcTrackerBase {
+                 // those requests and not torn down organically.
+                 if ((apnContext.getApnType() == PhoneConstants.APN_TYPE_DUN && teardownForDun())
+                         || apnContext.getState() != DctConstants.State.CONNECTED
+-                        || (ConfigResourceUtil.getBooleanValue(mPhone.getContext(),
+-                               "config_enable_mms_with_mobile_data_off") &&
+-                            apnContext.getApnType().equals(PhoneConstants.APN_TYPE_MMS))
+                         || mPhone.getSubId() != SubscriptionManager.getDefaultDataSubId() ) {
+                     cleanup = true;
+                 } else {
+@@ -3016,15 +3017,19 @@ public class DcTracker extends DcTrackerBase {
  
          int dataRat = mPhone.getServiceState().getRilDataRadioTechnology();
          int appFamily = UiccController.getFamilyFromRadioTechnology(dataRat);
@@ -10046,7 +10056,7 @@ index e1569ae..5beb9b6 100644
  
          IccRecords r = mIccRecords.get();
          if (r != newIccRecords) {
-@@ -3044,6 +3052,66 @@ public class DcTracker extends DcTrackerBase {
+@@ -3047,6 +3052,66 @@ public class DcTracker extends DcTrackerBase {
              // Records changed -> return true
              result = true;
          }
@@ -10113,7 +10123,7 @@ index e1569ae..5beb9b6 100644
          return result;
      }
  
-@@ -3342,4 +3410,65 @@ public class DcTracker extends DcTrackerBase {
+@@ -3345,4 +3410,65 @@ public class DcTracker extends DcTrackerBase {
              notifyAllDataDisconnected();
          }
      }
@@ -10330,35 +10340,6 @@ index febed59..464cbe8 100644
 +    protected String mSvlteOperatorNumeric;
 +    protected ApnSetting mSvlteIaApnSetting;
  }
-diff --git a/src/java/com/android/internal/telephony/dataconnection/DctController.java b/src/java/com/android/internal/telephony/dataconnection/DctController.java
-index c630cb6..1a6024a 100644
---- a/src/java/com/android/internal/telephony/dataconnection/DctController.java
-+++ b/src/java/com/android/internal/telephony/dataconnection/DctController.java
-@@ -560,24 +560,12 @@ public class DctController extends Handler {
-         int priority = -1;
-         int subId;
- 
--        int activePhoneId = -1;
--        for (int i=0; i<mDcSwitchStateMachine.length; i++) {
--            if (!mDcSwitchAsyncChannel[i].isIdleSync()) {
--                activePhoneId = i;
--                break;
--            }
--        }
--
-         for (RequestInfo requestInfo : mRequestInfos.values()) {
-             logd("getTopPriorityRequestPhoneId requestInfo=" + requestInfo);
-             if (requestInfo.priority > priority) {
-                 priority = requestInfo.priority;
-                 topSubId = requestInfo.request.networkCapabilities.getNetworkSpecifier();
-                 retRequestInfo = requestInfo;
--            } else if (priority == requestInfo.priority) {
--                if (requestInfo.executedPhoneId == activePhoneId) {
--                   topSubId = requestInfo.request.networkCapabilities.getNetworkSpecifier();
--               }
-             }
-         }
-         if (TextUtils.isEmpty(topSubId)) {
 diff --git a/src/java/com/android/internal/telephony/gsm/CallFailCause.java b/src/java/com/android/internal/telephony/gsm/CallFailCause.java
 index 5861c4c..ebc7d53 100644
 --- a/src/java/com/android/internal/telephony/gsm/CallFailCause.java
@@ -10416,10 +10397,10 @@ index e2624da..183e445 100644
                  found.onUssdFinishedError();
              } else {
 diff --git a/src/java/com/android/internal/telephony/gsm/GsmServiceStateTracker.java b/src/java/com/android/internal/telephony/gsm/GsmServiceStateTracker.java
-index 995c64b..7669324 100644
+index 24eea49..1646139 100644
 --- a/src/java/com/android/internal/telephony/gsm/GsmServiceStateTracker.java
 +++ b/src/java/com/android/internal/telephony/gsm/GsmServiceStateTracker.java
-@@ -229,6 +229,11 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
+@@ -231,6 +231,11 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
          mCi.setOnNITZTime(this, EVENT_NITZ_TIME, null);
          mCi.setOnRestrictedStateChanged(this, EVENT_RESTRICTED_STATE_CHANGED, null);
  
@@ -10431,7 +10412,7 @@ index 995c64b..7669324 100644
          // system setting property AIRPLANE_MODE_ON is set in Settings.
          int airplaneMode = Settings.Global.getInt(
                  phone.getContext().getContentResolver(),
-@@ -278,6 +283,11 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
+@@ -280,6 +285,11 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
          if (mIccRecords != null) {mIccRecords.unregisterForRecordsLoaded(this);}
          mCi.unSetOnRestrictedStateChanged(this);
          mCi.unSetOnNITZTime(this);
@@ -10443,7 +10424,7 @@ index 995c64b..7669324 100644
          mCr.unregisterContentObserver(mAutoTimeObserver);
          mCr.unregisterContentObserver(mAutoTimeZoneObserver);
          mPhone.getContext().unregisterReceiver(mIntentReceiver);
-@@ -509,6 +519,31 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
+@@ -511,6 +521,31 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
                  updateSpnDisplay();
                  break;
  
@@ -10475,41 +10456,6 @@ index 995c64b..7669324 100644
              default:
                  super.handleMessage(msg);
              break;
-@@ -1663,15 +1698,8 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
-      */
-     private boolean isOperatorConsideredNonRoaming(ServiceState s) {
-         String operatorNumeric = s.getOperatorNumeric();
--        String[] numericArray;
--        int subId = mPhone.getSubId();
--        if (subId >= 0) {
--            numericArray = SubscriptionManager.getResourcesForSubId(mPhone.getContext(),subId)
--                 .getStringArray(com.android.internal.R.array.config_operatorConsideredNonRoaming);
--        } else {
--            numericArray = mPhone.getContext().getResources().getStringArray(
-+        String[] numericArray = mPhone.getContext().getResources().getStringArray(
-                     com.android.internal.R.array.config_operatorConsideredNonRoaming);
--        }
- 
-         if (numericArray.length == 0 || operatorNumeric == null) {
-             return false;
-@@ -1687,16 +1715,8 @@ public class GsmServiceStateTracker extends ServiceStateTracker {
- 
-     private boolean isOperatorConsideredRoaming(ServiceState s) {
-         String operatorNumeric = s.getOperatorNumeric();
--        String[] numericArray;
--        int subId = mPhone.getSubId();
--        if (subId >= 0) {
--            numericArray = SubscriptionManager.getResourcesForSubId(mPhone.getContext(),subId)
--                .getStringArray(
-+        String[] numericArray = mPhone.getContext().getResources().getStringArray(
-                     com.android.internal.R.array.config_sameNamedOperatorConsideredRoaming);
--        } else {
--            numericArray = mPhone.getContext().getResources().getStringArray(
--                    com.android.internal.R.array.config_sameNamedOperatorConsideredRoaming);
--        }
- 
-         if (numericArray.length == 0 || operatorNumeric == null) {
-             return false;
 diff --git a/src/java/com/android/internal/telephony/imsphone/ImsPhoneCommandInterface.java b/src/java/com/android/internal/telephony/imsphone/ImsPhoneCommandInterface.java
 index aab5987..2395995 100644
 --- a/src/java/com/android/internal/telephony/imsphone/ImsPhoneCommandInterface.java

@@ -1,10 +1,10 @@
-commit 92bc09169021cadae99e8ec6bd09bae54e38d59f
+commit 27f637e732c1bd85a09b3165761153fa8350dd87
 Author: Deepflex <hqdevnews@gmail.com>
-Date:   Mon Aug 1 18:27:54 2016 +0700
+Date:   Sat Aug 6 03:12:59 2016 +0700
 
     mtk opt net ims
     
-    Change-Id: If572a6e1cf7ac544968043dadc9af9f03c115514
+    Change-Id: I58b23688707bf2380b60a278f86f2224bcf16a6a
 
 diff --git a/Android.mk b/Android.mk
 index ee92ea6..c71bc5b 100644
