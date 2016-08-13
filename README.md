@@ -60,6 +60,7 @@ This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6
 ## Thanks to:
  * CyanogenMod team
  * Wuxianlin
+ * Ferhung
  * Xen0n
  * Leskal
  * JonnyXDA
