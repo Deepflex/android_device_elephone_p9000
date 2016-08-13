@@ -56,7 +56,7 @@ ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
 # Home button
-or.button.ledvalue=-1
+ro.button.ledvalue=-1
 ro.home_doublelong_press=yes
 
 # MAL
