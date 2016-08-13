@@ -1,7 +1,7 @@
 # Nfc
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-	Nfc \
+    Nfc \
     Tag
     
 PRODUCT_COPY_FILES += \
