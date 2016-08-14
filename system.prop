@@ -200,3 +200,4 @@ ro.device.gpu=ARM Mali-T860
 ro.device.rear_cam=13 MP
 ro.device.front_cam=8 MP
 ro.device.screen_res=1080X1920
+ro.product.model=P9000
