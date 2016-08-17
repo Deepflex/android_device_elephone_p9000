@@ -21,7 +21,7 @@ Display | 5.5" 1920 x 1080 px DPI 480
 Rear Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
 Front Camera | 8MP (OV)
 
-![Elephone P9000](http://gloimg.gearbest.com/gb/pdm-product-pic/Electronic/2016/01/27/goods-img/1461850434808798450.jpg "Elephone P9000 in black")
+![Elephone P9000](http://g03.a.alicdn.com/kf/HTB1.TsuKVXXXXanXXXXq6xXFXXX6/Official-Direct-Elephone-P9000-Helio-P10-MTK6755-2-0GHz-Octa-Core-4GB-RAM-32GB-ROM-5.jpg "Elephone P9000 in black")
 
 This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROM.
 
