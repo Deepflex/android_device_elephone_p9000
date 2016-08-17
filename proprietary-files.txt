@@ -208,9 +208,6 @@ etc/.tp/.thermal_policy_00
 etc/.tp/.thermal_policy_01
 etc/.tp/.thermal_policy_02
 etc/MTKNfclicense.lic
-etc/dhcpcd/dhcpcd-run-hooks
-etc/dhcpcd/dhcpcd-hooks/20-dns.conf
-etc/dhcpcd/dhcpcd-hooks/95-configured
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
