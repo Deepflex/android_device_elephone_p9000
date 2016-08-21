@@ -965,11 +965,6 @@ service pq /system/bin/pq
     user system
     group system graphics
 
-service aal /system/bin/aal
-    class main
-    user system
-    group system graphics
-
 # FOTA upgrade
 service rbfota /system/bin/fota1
     class main
