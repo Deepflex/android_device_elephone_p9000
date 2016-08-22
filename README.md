@@ -1,15 +1,19 @@
-Elephone P9000
+Elephone P9000 - CyanogenMod 13.0/AOSP
 ==============
 
-The Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone.
+This branch is device for building of the CyanogenMod 13.0 and Android Marshmallow 6.0 AOSP ROMs. For more information about building the ROM, read our [build manual](manual).
 
-It was announced on 25 December 2015.
+---
 
-Now P9000 supporting CyanogenMod 13.0
+# About Device
 
-For more information about building read "manual"
+![Elephone P9000](http://g03.a.alicdn.com/kf/HTB1.TsuKVXXXXanXXXXq6xXFXXX6/Official-Direct-Elephone-P9000-Helio-P10-MTK6755-2-0GHz-Octa-Core-4GB-RAM-32GB-ROM-5.jpg "Elephone P9000 in black")
 
-Basic   | Spec Sheet
+Announced on 25th December 2015, the Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone. The P9000 now supports CyanogenMod 13.0!
+
+### Specifications
+
+Component Type | Details
 -------:|:-------------------------
 CPU     | 2.0GHz Octa-Core MT6755 (Helio P10)
 GPU     | Mali-T860
@@ -21,18 +25,18 @@ Display | 5.5" 1920 x 1080 px DPI 480
 Rear Camera | 13MP (Sony IMX258 Exmor RS), Dual LED Flash, Laser autofocus
 Front Camera | 8MP (OV)
 
-![Elephone P9000](http://g03.a.alicdn.com/kf/HTB1.TsuKVXXXXanXXXXq6xXFXXX6/Official-Direct-Elephone-P9000-Helio-P10-MTK6755-2-0GHz-Octa-Core-4GB-RAM-32GB-ROM-5.jpg "Elephone P9000 in black")
+---
 
-This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6.0 AOSP based roms) ROM.
+# Build Information
 
-## Working:
- * It is boots and hardware accelerated!
- * WiFi
+### Working:
+ * Hardware acceleration
+ * Wi-Fi
  * Fast charging
  * Offline charging
  * GPS
  * AGPS
- * ANT (Fitness trackers and etc)
+ * ANT (fitness trackers .etc)
  * Vibration
  * Audio
  * Auto brightness
@@ -40,24 +44,24 @@ This branch is device for building of CyanogenMod 13.0 (or Android Marshmallow 6
  * RAM and ROM
  * Rotation
  * All sensors
- * NFC (Payments, pairing)
+ * NFC (payments, pairing .etc)
  * Lazer autofocus
- * Flashlight (Statusbar and Camera)
+ * Flashlight (statusbar and camera)
  * Bluetooth
- * Camera rear/front (Video and Photos)
- * Hdr in camera app
- * External SD
- * RIL for SMS/Calls/Internet/Lte on 1 and 2 SIM
- * MTP and Mass Storage mode
- * Audio over Bluetooth (Music and etc)
- * Enforcing SELinux
- * Fingerprint Scanner
- * FM Radio
+ * Camera rear/front (video and photo)
+ * Camera HDR
+ * Micro SD support
+ * RIL for SMS/calls/internet/LTE on 1 and 2 SIM
+ * MTP and Mass Storage modes
+ * Audio over Bluetooth (music, calls .etc)
+ * SELinux enforcement
+ * Fingerprint scanner
+ * FM radio
 
-## Not working (yet):
- * Wi-Fi Tethering
+### In progress:
+ * Wi-Fi tethering
 
-## Thanks to:
+### Thanks to:
  * CyanogenMod team
  * Wuxianlin
  * Ferhung
