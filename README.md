@@ -70,3 +70,4 @@ Front Camera | 8MP (OV)
  * JonnyXDA
  * olegsvs
  * Visi0nary
+ * andyrichardson
