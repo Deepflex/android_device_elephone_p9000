@@ -231,6 +231,7 @@ lib64/lib_agoldcam_ov13850_mipi_raw_TSC_50064_v1.so
 lib64/lib_agoldcam_ov13850_mipi_raw_XL_CMB052_v1.so
 lib64/lib_agoldcam_ov5648_mipi_raw_TSC_HY517_v1.so
 lib64/lib_agoldcam_ov8858_mipi_raw_XL_CMB046_v1.so
+lib64/lib_agoldcam_s5k3m2_mipi_raw_SYX_3907A_v1.so
 lib64/lib_agoldlens_dw9714af_v1.so
 lib64/lib_agoldlens_dw9714af_v2.so
 lib64/lib_agoldlens_dw9714af_v3.so
@@ -409,6 +410,7 @@ lib/lib_agoldcam_ov13850_mipi_raw_TSC_50064_v1.so
 lib/lib_agoldcam_ov13850_mipi_raw_XL_CMB052_v1.so
 lib/lib_agoldcam_ov5648_mipi_raw_TSC_HY517_v1.so
 lib/lib_agoldcam_ov8858_mipi_raw_XL_CMB046_v1.so
+lib/lib_agoldcam_s5k3m2_mipi_raw_SYX_3907A_v1.so
 lib/lib_agoldlens_dw9714af_v1.so
 lib/lib_agoldlens_dw9714af_v2.so
 lib/lib_agoldlens_dw9714af_v3.so
