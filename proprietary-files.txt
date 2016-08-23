@@ -2,7 +2,6 @@ app/Nfc/Nfc.apk
 bin/6620_launcher
 bin/6620_wmt_concurrency
 bin/6620_wmt_lpbk
-bin/aal
 bin/AcdApiDaemon
 bin/aee
 bin/aee_archive
@@ -225,7 +224,6 @@ lib64/hw/sensors.mt6755.so
 lib64/lib3a_sample.so
 lib64/lib3a.so
 lib64/liba3m.so
-lib64/libaal.so
 lib64/libacdk.so
 lib64/libaed.so
 lib64/lib_agoldcam_imx258_mipi_raw_XL_4033_v0.so
@@ -404,7 +402,6 @@ lib/hw/sensors.mt6755.so
 lib/lib3a_sample.so
 lib/lib3a.so
 lib/liba3m.so
-lib/libaal.so
 lib/libacdk.so
 lib/libaed.so
 lib/lib_agoldcam_imx258_mipi_raw_XL_4033_v0.so
