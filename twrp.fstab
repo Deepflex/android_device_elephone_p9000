@@ -22,9 +22,7 @@
 /system                 ext4            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system              flags=backup=1;canbewiped;wipeingui
 /system_image           emmc            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system
 /cache                  ext4            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache               flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
-/cache                  f2fs            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache               flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
 /data                   ext4            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata            flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;settingsstorage;encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
-/data                   f2fs            /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata            flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;settingsstorage;encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
 
 # Removable storage
 /external_sd            vfat            /dev/block/mmcblk1p1    /dev/block/mmcblk1                                flags=display="Micro SDcard";backup=0;wipeingui;storage;removable;settingsstorage;encryptable=userdata
