@@ -1,4 +1,5 @@
 # WiFi
+BOARD_WLAN_DEVICE                  := MediaTek
 BOARD_HOSTAPD_DRIVER               := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB          := lib_driver_cmd_mt66xx
 BOARD_WPA_SUPPLICANT_DRIVER        := NL80211
