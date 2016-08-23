@@ -12,7 +12,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset 
 TARGET_KERNEL_SOURCE := kernel/elephone/p9000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := p9000_cyanogenmod13_defconfig
+TARGET_KERNEL_CONFIG := p9000_flexy_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 MTK_APPENDED_DTB_SUPPORT := yes
 
