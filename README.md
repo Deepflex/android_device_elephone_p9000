@@ -57,9 +57,11 @@ Front Camera | 8MP (OV)
  * SELinux enforcement
  * Fingerprint scanner
  * FM radio
+ * Wi-Fi tethering
 
 ### In progress:
- * Wi-Fi tethering
+ * Add HOME Button functional
+ * Fix flip case
 
 ### Thanks to:
  * CyanogenMod team
@@ -71,3 +73,5 @@ Front Camera | 8MP (OV)
  * olegsvs
  * Visi0nary
  * andyrichardson
+ * Team M.A.D
+

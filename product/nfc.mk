@@ -5,6 +5,7 @@ PRODUCT_PACKAGES += \
     Tag
     
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/Nfc/Nfc.apk:system/app/Nfc/Nfc.apk \
     $(LOCAL_PATH)/configs/nfc.cfg:system/etc/nfc.cfg \
     $(LOCAL_PATH)/configs/nfcse.cfg:system/etc/nfcse.cfg \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml \

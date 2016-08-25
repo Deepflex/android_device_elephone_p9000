@@ -801,7 +801,7 @@ on boot
     chown bluetooth radio /dev/ttyGS2
     chmod 0660 /dev/ttyGS2
 
-on property:ro.board.platform=mt6753
+on property:ro.board.platform=mt6755
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1300000
@@ -964,12 +964,6 @@ service pq /system/bin/pq
     class main
     user system
     group system graphics
-
-# FOTA upgrade
-service rbfota /system/bin/fota1
-    class main
-    disabled
-    oneshot
 
 
 service p2p_supplicant /system/bin/wpa_supplicant \
