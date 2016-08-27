@@ -22,9 +22,7 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-
+    
     # if primary storage is physical, set ro.vold.primary_physical to 1
     # setprop ro.vold.primary_physical 1
 
