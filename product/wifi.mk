@@ -1,6 +1,5 @@
 # WiFi
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     libwifi-hal-mt66xx \
     lib_driver_cmd_mt66xx \
     libwpa_client \
