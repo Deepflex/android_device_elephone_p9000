@@ -14,7 +14,7 @@ index 86a4fc6..584a466 100644
      props.batteryLevel = mBatteryFixedCapacity ?
          mBatteryFixedCapacity :
          getIntField(mHealthdConfig->batteryCapacityPath);
-+#ifndef MTK_HARDWARE
++#ifndef BOARD_USES_MTK_HARDWARE
      props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath) / 1000;
 +#else
 +    props.batteryVoltage = getIntField(mHealthdConfig->batteryVoltagePath);
