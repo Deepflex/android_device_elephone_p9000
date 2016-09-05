@@ -14,7 +14,7 @@ index 36f6da1..575280b 100644
  	CameraUtils.cpp \
  	VendorTagDescriptor.cpp
  
-+ifeq ($(BOARD_HAS_MTK_HARDWARE),true)
++ifeq ($(BOARD_USES_MTK_HARDWARE),true)
 +	LOCAL_SRC_FILES+= \
 +		MtkCameraParameters.cpp
 +endif
@@ -761,7 +761,7 @@ index efcd541..d307afc 100644
  LOCAL_CFLAGS += -Werror -Wno-error=deprecated-declarations -Wall
  LOCAL_CLANG := true
  
-+ifeq ($(MTK_HARDWARE),true)
++ifeq ($(BOARD_USES_MTK_HARDWARE),true)
 +LOCAL_SRC_FILES += \
 +    mtkaudio_stubs.cpp
 +
@@ -1037,7 +1037,7 @@ index d16d5df..31a0c4f 100644
  endif
  endif
  
-+ifeq ($(BOARD_HAS_MTK_HARDWARE),true)
++ifeq ($(BOARD_USES_MTK_HARDWARE),true)
 +ifeq ($(BOARD_USES_LEGACY_MTK_AV_BLOB),true)
 +LOCAL_CFLAGS += -DUSE_LEGACY_MTK_AV_BLOB
 +endif
@@ -1156,7 +1156,7 @@ index af46d63..efed5a2 100644
 @@ -696,7 +696,7 @@ void CameraClient::disableMsgType(int32_t msgType) {
  #define CHECK_MESSAGE_INTERVAL 10 // 10ms
  bool CameraClient::lockIfMessageWanted(int32_t msgType) {
- #ifdef MTK_HARDWARE
+ #ifdef BOARD_USES_MTK_HARDWARE
 -    return true;
 +    return true; //needed too.
  #endif
@@ -1166,7 +1166,7 @@ index af46d63..efed5a2 100644
          int32_t ext2, void* user) {
      LOG2("notifyCallback(%d)", msgType);
  
-+#ifdef MTK_HARDWARE
++#ifdef BOARD_USES_MTK_HARDWARE
 +    if (msgType == 0x40000000) { //MTK_CAMERA_MSG_EXT_NOTIFY
 +        if (ext1 == 0x11) { //MTK_CAMERA_MSG_EXT_NOTIFY_SHUTTER
 +            msgType = CAMERA_MSG_SHUTTER;
@@ -1185,7 +1185,7 @@ index af46d63..efed5a2 100644
          return;
      }
  
-+#ifdef MTK_HARDWARE
++#ifdef BOARD_USES_MTK_HARDWARE
 +    if (msgType == 0x80000000) { //MTK_CAMERA_MSG_EXT_DATA
 +        struct DataHeader {
 +            uint32_t        extMsgType;
