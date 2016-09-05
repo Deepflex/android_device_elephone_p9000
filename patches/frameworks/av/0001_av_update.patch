@@ -761,7 +761,7 @@ index efcd541..d307afc 100644
  LOCAL_CFLAGS += -Werror -Wno-error=deprecated-declarations -Wall
  LOCAL_CLANG := true
  
-+ifeq ($(BOARD_USES_MTK_HARDWARE),true)
++ifeq ($(MTK_HARDWARE),true)
 +LOCAL_SRC_FILES += \
 +    mtkaudio_stubs.cpp
 +
@@ -1157,7 +1157,7 @@ index af46d63..efed5a2 100644
          int32_t ext2, void* user) {
      LOG2("notifyCallback(%d)", msgType);
  
-+#ifdef BOARD_USES_MTK_HARDWARE
++#ifdef MTK_HARDWARE
 +    if (msgType == 0x40000000) { //MTK_CAMERA_MSG_EXT_NOTIFY
 +        if (ext1 == 0x11) { //MTK_CAMERA_MSG_EXT_NOTIFY_SHUTTER
 +            msgType = CAMERA_MSG_SHUTTER;
@@ -1176,7 +1176,7 @@ index af46d63..efed5a2 100644
          return;
      }
  
-+#ifdef BOARD_USES_MTK_HARDWARE
++#ifdef MTK_HARDWARE
 +    if (msgType == 0x80000000) { //MTK_CAMERA_MSG_EXT_DATA
 +        struct DataHeader {
 +            uint32_t        extMsgType;
