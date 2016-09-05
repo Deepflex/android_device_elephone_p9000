@@ -1153,15 +1153,6 @@ diff --git a/services/camera/libcameraservice/api1/CameraClient.cpp b/services/c
 index af46d63..efed5a2 100644
 --- a/services/camera/libcameraservice/api1/CameraClient.cpp
 +++ b/services/camera/libcameraservice/api1/CameraClient.cpp
-@@ -696,7 +696,7 @@ void CameraClient::disableMsgType(int32_t msgType) {
- #define CHECK_MESSAGE_INTERVAL 10 // 10ms
- bool CameraClient::lockIfMessageWanted(int32_t msgType) {
- #ifdef BOARD_USES_MTK_HARDWARE
--    return true;
-+    return true; //needed too.
- #endif
-     int sleepCount = 0;
-     while (mMsgEnabled & msgType) {
 @@ -742,6 +742,18 @@ void CameraClient::notifyCallback(int32_t msgType, int32_t ext1,
          int32_t ext2, void* user) {
      LOG2("notifyCallback(%d)", msgType);
