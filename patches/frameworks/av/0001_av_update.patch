@@ -761,7 +761,7 @@ index efcd541..d307afc 100644
  LOCAL_CFLAGS += -Werror -Wno-error=deprecated-declarations -Wall
  LOCAL_CLANG := true
  
-+ifeq ($(MTK_HARDWARE),true)
++ifeq ($(BOARD_USES_MTK_HARDWARE),true)
 +LOCAL_SRC_FILES += \
 +    mtkaudio_stubs.cpp
 +
