@@ -72,17 +72,90 @@ Only the three quirks included above are recognized at this point:
     corresponding color space converter for thumbnail extraction,
     matching surfaceflinger support that can render the custom format to
     a texture and possibly other code, so just DON'T USE THIS QUIRK.
-
+   
     2012/07/13 config for MTK OMX Media Codecs, created by Morris Yang (mtk03147)
 -->
 
 <MediaCodecs>
-    <Settings>
-        <Setting name="max-video-encoder-input-buffers" value="10" />
-    </Settings>
-    <Include href="media_codecs_mediatek_audio.xml" />
-    <Include href="media_codecs_mediatek_video.xml" />
+    <Decoders>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.HEVC" type="video/hevc" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.MPEG2" type="video/mpeg2" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.MPEG4" type="video/mp4v-es" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.H263" type="video/3gpp" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.AVC" type="video/avc" >
+            <Quirk name="wants-NAL-fragments" />
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.VPX" type="video/x-vnd.on2.vp8" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.VP9" type="video/x-vnd.on2.vp9" >
+            <Limit name="size" min="16x16" max="1920x1088" />
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Feature name="adaptive-playback"/>
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.VC1" type="video/x-ms-wmv" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.DIVX" type="video/divx" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.DIVX3" type="video/divx3" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.XVID" type="video/xvid" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.S263" type="video/flv1" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+    </Decoders>
+
+    <Encoders>
+        <MediaCodec name="OMX.MTK.VIDEO.ENCODER.MPEG4" type="video/mp4v-es" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.ENCODER.H263" type="video/3gpp" >
+             <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.ENCODER.AVC" type="video/avc" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+        <MediaCodec name="OMX.MTK.VIDEO.ENCODER.HEVC" type="video/hevc" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+        </MediaCodec>
+    </Encoders>
     <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
     <Include href="media_codecs_google_video_le.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>

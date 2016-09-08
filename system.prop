@@ -55,10 +55,6 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
-# Home button
-ro.button.ledvalue=-1
-ro.home_doublelong_press=yes
-
 # MAL
 persist.mal.mode=0
 
@@ -121,7 +117,9 @@ ro.mtk_oma_drm_support=1
 ro.mtk_cta_drm_support=1
 ro.mtk_widevine_drm_l3_support=1
 ro.mtk_eap_sim_aka=1
+ro.mtk_bt_fm_over_bt=1
 ro.mtk_fm_recording_support=1
+ro.mtk_fm_short_antenna_support=1
 ro.mtk_audio_ape_support=1
 ro.mtk_flv_playback_support=1
 ro.mtk_wmv_playback_support=1

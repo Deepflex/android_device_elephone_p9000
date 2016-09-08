@@ -6,6 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL Proprietary
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/RIL/bin/gsm0710muxd:system/bin/gsm0710muxd \
+    $(LOCAL_PATH)/RIL/bin/gsm0710muxdmd2:system/bin/gsm0710muxdmd2 \
     $(LOCAL_PATH)/RIL/bin/mtkrild:system/bin/mtkrild \
     $(LOCAL_PATH)/RIL/bin/mtkrildmd2:system/bin/mtkrildmd2 \
     $(LOCAL_PATH)/RIL/lib/libmal.so:system/lib/libmal.so \
