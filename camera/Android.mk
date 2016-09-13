@@ -20,7 +20,7 @@ LOCAL_C_INCLUDES := \
     frameworks/av/include
 
 LOCAL_SRC_FILES := \
-    CameraParameters.cpp
+    MtkCameraParameters.cpp
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
 LOCAL_MODULE := libcamera_parameters_ext
