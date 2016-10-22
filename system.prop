@@ -1,0 +1,43 @@
+# RIL
+rild.libpath=mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+ril.specific.sm_cause=0
+ril.external.md
+ril.current.share_modem=2
+ril.flightmode.poweroffMD=1
+ril.telephony.mode=0
+ril.radiooff.poweroffMD=0
+ro.mtk_enable_md1=1
+ro.telephony.default_network=9
+persist.radio.default.sim=0
+persist.radio.multisim.config=dsds
+persist.radio.fd.counter=15
+persist.radio.fd.off.counter=5
+persist.radio.fd.r8.counter=15
+persist.radio.fd.off.r8.counter=5
+
+ro.telephony.ril_class=MT6755
+
+# Wifi
+wifi.interface=wlan0
+wifi.tethering.interface=ap
+wifi.direct.interface=p2p0
+
+# Graphics
+ro.opengles.version=196608
+ro.sf.lcd_density=480
+
+# FRP
+ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
+
+# Memory trim
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.empty_app_percent=50
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_cache_percent=100
+ro.sys.fw.trim_enable_memory=1073741824
+
+ro.config.max_starting_bg=3
+
+# Use 3 threads max for dex2oat
+ro.sys.fw.dex2oat_thread_count=3
