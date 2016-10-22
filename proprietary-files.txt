@@ -208,6 +208,7 @@ lib/hw/hwcomposer.mt6755.so
 lib/hw/lights.mt6755.so
 lib/hw/memtrack.mt6755.so
 lib/hw/mmsdk.mt6755.so
+lib/hw/nfc_nci.mt6605.default.so
 lib/hw/sensors.mt6755.so
 lib/lib3a.so
 lib/lib3a_sample.so
@@ -366,10 +367,12 @@ lib/libmtk_mmutils.so
 lib/libmtkcamera_client.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
+lib/libmtknfc.so
 lib/libmtkshifter.so
 lib/libn3d3a.so
 lib/libnativecheck-jni.so
 lib/libnetutils.so
+lib/libnfc_ndef.so
 lib/libnvram.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
@@ -409,6 +412,7 @@ lib64/hw/hwcomposer.mt6755.so
 lib64/hw/lights.mt6755.so
 lib64/hw/memtrack.mt6755.so
 lib64/hw/mmsdk.mt6755.so
+lib64/hw/nfc_nci.mt6605.default.so
 lib64/hw/sensors.mt6755.so
 lib64/lib3a.so
 lib64/lib3a_sample.so
@@ -547,11 +551,13 @@ lib64/libmtk_mmutils.so
 lib64/libmtkcamera_client.so
 lib64/libmtkjpeg.so
 lib64/libmtklimiter.so
+lib64/libmtknfc.so
 lib64/libmtkplayer.so
 lib64/libmtkshifter.so
 lib64/libn3d3a.so
 lib64/libnativecheck-jni.so
 lib64/libnetutils.so
+lib64/libnfc_ndef.so
 lib64/libnvram.so
 lib64/libnvram_daemon_callback.so
 lib64/libnvram_platform.so
