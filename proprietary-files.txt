@@ -325,6 +325,8 @@ lib/libfeatureio.so
 lib/libfeatureiodrv.so
 lib/libfgauge.so
 lib/libfile_op.so
+lib/libfmcust.so
+lib/libfmjni.so
 lib/libfusion.so
 lib/libgas.so
 lib/libged.so
@@ -510,6 +512,9 @@ lib64/libem_wifi_jni.so
 lib64/libfeatureio.so
 lib64/libfeatureiodrv.so
 lib64/libfile_op.so
+lib64/libfmcust.so
+lib64/libfmjni.so
+lib64/libfmjniem.so
 lib64/libgas.so
 lib64/libged.so
 lib64/libgem.so
@@ -542,6 +547,7 @@ lib64/libmtk_mmutils.so
 lib64/libmtkcamera_client.so
 lib64/libmtkjpeg.so
 lib64/libmtklimiter.so
+lib64/libmtkplayer.so
 lib64/libmtkshifter.so
 lib64/libn3d3a.so
 lib64/libnativecheck-jni.so
