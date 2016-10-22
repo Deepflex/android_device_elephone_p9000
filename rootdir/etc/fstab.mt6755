@@ -6,10 +6,10 @@
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/recovery     /recovery           emmc       defaults                                                      defaults
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/boot         /boot               emmc       defaults                                                      defaults
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system       /system             ext4       ro,barrier=1                                                  wait
-/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata     /data               f2fs       rw,nosuid,nodev,noatime,inline_xattr,flush_merge,nobarrier    wait,check,formattable,encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
-/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata     /data               ext4       rw,nosuid,nodev,noatime,noauto_da_alloc,discard,barrier=1     wait,check,formattable,encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
-/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache        /cache              f2fs       rw,nosuid,nodev,noatime,inline_xattr,flush_merge,nobarrier    wait,check,formattable
-/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache        /cache              ext4       rw,nosuid,nodev,noatime,noauto_da_alloc,discard,barrier=1     wait,check,formattable
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata     /data               f2fs       rw,noatime,nosuid,nodev,nodiratime,inline_xattr,nobarrier     wait,check,formattable,encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata     /data               ext4       rw,noatime,nosuid,nodev,noauto_da_alloc,discard,barrier=1     wait,check,formattable,encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache        /cache              f2fs       rw,noatime,nosuid,nodev,nodiratime,inline_xattr,nobarrier     wait,check,formattable
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache        /cache              ext4       rw,noatime,nosuid,nodev,noauto_da_alloc,discard,barrier=1     wait,check,formattable
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect1     /protect_f          ext4       noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect2     /protect_s          ext4       noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/nvdata       /nvdata             ext4       noatime,nosuid,nodev,noauto_da_alloc,discard                  wait,check,formattable

@@ -1,14 +1,9 @@
-# WiFi
+# Wifi
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
-    libwifi-hal-mt66xx \
-    lib_driver_cmd_mt66xx \
     libwpa_client \
     hostapd \
-    hostapd_cli \
-    wifi_hal \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    dhcpcd.conf \
+    wpa_supplicant
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \

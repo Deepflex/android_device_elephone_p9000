@@ -72,10 +72,6 @@ bin/wmt_loader
 bin/xlog
 etc/MTKNfclicense.lic
 etc/custom.conf
-etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
-etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
-etc/firmware/WIFI_RAM_CODE_6755
-etc/firmware/WMT_SOC.cfg
 etc/firmware/catcher_filter_1_ulwctg_n.bin
 etc/firmware/dsp_1_ulwctg_n.bin
 etc/firmware/modem_1_ulwctg_n.img
@@ -96,7 +92,10 @@ etc/firmware/pcm_sodi_ddrdfs.bin
 etc/firmware/pcm_sodi_ddrdfs_by_mp1.bin
 etc/firmware/pcm_suspend.bin
 etc/firmware/pcm_suspend_by_mp1.bin
-etc/mtk_omx_core.cfg
+etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
+etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
+etc/firmware/WIFI_RAM_CODE_6755
+etc/firmware/WMT_SOC.cfg
 etc/mtklog-config.prop
 etc/nfc_conformance/DTA_Config/AT4/listen_config.txt
 etc/nfc_conformance/DTA_Config/AT4/listen_polling.txt
@@ -236,7 +235,6 @@ lib/libcamalgo.so
 lib/libcamdrv.so
 lib/libcameracustom.so
 lib/libccci_util.so
-lib/libcurl.so
 lib/libcustom_jni.so
 lib/libcustom_nvram.so
 lib/libcustom_prop.so
@@ -373,6 +371,8 @@ lib64/libaudiocompensationfilter.so
 lib64/libaudiocomponentengine.so
 lib64/libaudiocustparam.so
 lib64/libaudiodcrflt.so
+lib64/libaudiopolicymanager.so
+lib64/libaudiopolicymanagerdefault.so
 lib64/libaudiosetting.so
 lib64/libbessound_hd_mtk.so
 lib64/libblisrc.so
@@ -415,7 +415,6 @@ lib64/libcamalgo.so
 lib64/libcamdrv.so
 lib64/libcameracustom.so
 lib64/libccci_util.so
-lib64/libcurl.so
 lib64/libcustom_jni.so
 lib64/libcustom_nvram.so
 lib64/libcustom_prop.so

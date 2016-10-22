@@ -36,7 +36,6 @@ Front Camera | 8MP (OV)
  * Offline charging
  * GPS
  * AGPS
- * ANT (fitness trackers .etc)
  * Vibration
  * Audio
  * Auto brightness
@@ -58,15 +57,16 @@ Front Camera | 8MP (OV)
  * Fingerprint scanner
  * FM radio
  * Wi-Fi tethering
+ * HOME Button like in stock
+ * Special button new functional
 
 ### In progress:
- * Add HOME Button functional
- * Fix flip case
 
 ### Thanks to:
  * CyanogenMod team
  * Wuxianlin
  * Ferhung
+ * SHVED
  * Xen0n
  * Leskal
  * JonnyXDA
