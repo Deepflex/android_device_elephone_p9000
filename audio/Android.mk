@@ -18,6 +18,7 @@ LOCAL_PATH := $(my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS += $(LIBLOG_CFLAGS)
+LOCAL_MODULE := libmedia
 LOCAL_SRC_FILES := mtkaudio_stubs.cpp
 LOCAL_C_INCLUDES += frameworks/rs/server/
 
