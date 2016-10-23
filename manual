@@ -16,5 +16,5 @@ After apply patches:
 sh device/elephone/p9000/patches/install.sh
 Write:
 . build/envsetup.sh && breakfast p9000
-mka otapackage
+brunch p9000
 Wait of finish, for me ~2hr
