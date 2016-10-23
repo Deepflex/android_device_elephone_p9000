@@ -1,6 +1,6 @@
 # RIL
 rild.libpath=mtk-ril.so
-rild.libargs=-d /dev/ttyC0
+rild.libargs=-d[SPACE]/dev/ttyC0
 ril.specific.sm_cause=0
 ril.external.md
 ril.current.share_modem=2
