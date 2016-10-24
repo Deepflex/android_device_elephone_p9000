@@ -1,14 +1,14 @@
 [
   {
     "remote": "github",
-    "repository": "Deepflex/android_vendor_elephone_p9000",
+    "repository": "leskal/android_vendor_elephone_p9000",
     "target_path": "vendor/elephone/p9000",
-    "branch": "master"
+    "branch": "cm-13.0"
   },
   {
     "remote": "github",
-    "repository": "Deepflex/android_kernel_elephone_p9000",
+    "repository": "leskal/android_kernel_elephone_p9000",
     "target_path": "kernel/elephone/p9000",
-    "branch": "flexy"
+    "branch": "cm-13.0"
   }
 ] 
