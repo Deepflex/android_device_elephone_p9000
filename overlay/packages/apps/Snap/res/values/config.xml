@@ -27,12 +27,4 @@
     <!-- Opens front camera using openLegacy() -->
     <bool name="front_camera_open_legacy">true</bool>
 
-    <!-- This value may be tweaked to save memory on low RAM devices. The value
-         is the percentage of camera preview height/width to scale to. -->
-    <integer name="panorama_frame_size_reduction">100</integer>
-
-    <!-- Force use a specific preview-size
-         Example: 1920x1080 -->
-    <string name="preview_size_for_photo">1920x1080</string>
-
 </resources>
