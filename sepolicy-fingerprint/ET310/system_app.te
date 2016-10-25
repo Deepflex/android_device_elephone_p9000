@@ -1,5 +1,0 @@
-# Date : 2015/12/9
-# Operation: Xiehaifei
-# Purpose: for et310 kernel uevent
-# Package: android.ui
-allow system_app self:netlink_kobject_uevent_socket { create ioctl read getattr setattr bind connect getopt setopt shutdown };

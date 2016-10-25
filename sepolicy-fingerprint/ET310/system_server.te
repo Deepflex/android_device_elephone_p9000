@@ -1,4 +1,0 @@
-#ET310 etsd
-binder_call(system_server,etsd)
-allow system_server etsd_service:service_manager find;
-allow fingerprintd etsd_service:service_manager find;
