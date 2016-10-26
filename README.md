@@ -48,19 +48,20 @@ Front Camera | 8MP (OV)
  * Flashlight (statusbar and camera)
  * Bluetooth
  * Camera rear/front (video and photo)
- * Camera HDR
  * Micro SD support
- * RIL for SMS/calls/internet/LTE on 1 and 2 SIM
  * MTP and Mass Storage modes
  * Audio over Bluetooth (music, calls .etc)
- * SELinux enforcement
  * Fingerprint scanner
- * FM radio
  * Wi-Fi tethering
  * HOME Button like in stock
  * Special button new functional
 
 ### In progress:
+ * Force close camera with HDR on
+ * RIL improvment for some users
+ * Enforcing SELinux
+ * FMRadio with enforcing SELinux
+ * PE and PE+ (fast charging)
 
 ### Thanks to:
  * CyanogenMod team
