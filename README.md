@@ -32,7 +32,6 @@ Front Camera | 8MP (OV)
 ### Working:
  * Hardware acceleration
  * Wi-Fi
- * Fast charging
  * Offline charging
  * GPS
  * AGPS
