@@ -249,17 +249,3 @@ index 0000000..2d9f2cc
 +IMPLEMENT_META_INTERFACE(ATVCtrlService, "android.media.IATVCtrlService");
 +
 +} // namespace
-diff --git a/media/libstagefright/Android.mk b/media/libstagefright/Android.mk
-index 29fb418..3c9f7d1 100644
---- a/media/libstagefright/Android.mk
-+++ b/media/libstagefright/Android.mk
-@@ -1,6 +1,9 @@
- LOCAL_PATH:= $(call my-dir)
- include $(CLEAR_VARS)
- 
-+ifeq ($(strip $(BOARD_USES_MTK_HARDWARE)), true)
-+LOCAL_CFLAGS += -DMTK_HARDWARE
-+endif
- 
- LOCAL_SRC_FILES:=                         \
-         ACodec.cpp                        \
