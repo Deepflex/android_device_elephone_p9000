@@ -1,1 +1,0 @@
-MTK_NFC_SUPPORT := yes
