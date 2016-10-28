@@ -1,12 +1,12 @@
-How to make a patches after changes in CM source code:
+How to make a patches after changes in Omni source code:
 
-Cd Working_dir (For example: Cd cm13/frameworks/base)
+Cd Working_dir (For example: Cd omni/frameworks/base)
 git status
 git add .
 git commit -m "name of patch"
 git show HEAD > 0001_.patch
 
-How to launch the CM13 build:
+How to launch the Omni build:
 Download vendor and device from my git.
 Create dirs elephone/p9000 and place them in working_dir/device and in working_dir/vendor
 After copy files from downloaded device in working_dir/device , and from downloaded vendor in working_dir/vendor
@@ -14,7 +14,8 @@ Open terminal and write:
 cd Working_dir
 After apply patches:
 sh device/elephone/p9000/patches/install.sh
-Write:
-. build/envsetup.sh && breakfast p9000
+Write
+. build/envsetup.sh && brunch p9000
+And
 mka otapackage
 Wait of finish, for me ~2hr

@@ -3,12 +3,12 @@
     "remote": "github",
     "repository": "Deepflex/android_vendor_elephone_p9000",
     "target_path": "vendor/elephone/p9000",
-    "branch": "master"
+    "revision": "master"
   },
   {
     "remote": "github",
-    "repository": "Deepflex/android_kernel_elephone_p9000",
+    "repository": "JonnyXDA/android_kernel_elephone_p9000",
     "target_path": "kernel/elephone/p9000",
-    "branch": "flexy"
+    "revision": "master"
   }
-] 
+]
