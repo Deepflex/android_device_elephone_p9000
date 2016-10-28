@@ -250,12 +250,25 @@ public class MT6755 extends RIL implements CommandsInterface {
     protected Object
     responseSimRefresh(Parcel p) {
         IccRefreshResponse response = new IccRefreshResponse();
+        int files_num = 0;
 
         response.refreshResult = p.readInt();
         String rawefId = p.readString();
-        response.efId   = rawefId == null ? 0 : Integer.parseInt(rawefId);
-        response.aid = p.readString();
 
+        if (null != rawefId && 4 <= rawefId.length()) {
+            files_num = rawefId.length() / 4;
+        }
+        response.efId = new int[files_num];
+
+        int startIdx = 0;
+        if (null != rawefId && 4 <= rawefId.length()) {
+            for (int i = 0; i < files_num; i++) {
+                String rawefidStr = rawefId.substring(startIdx, startIdx + 4);
+                response.efId[i] = (Integer.valueOf(rawefidStr, 16)).intValue();
+                startIdx += 4;
+            }
+        }
+        response.aid = p.readString();
         return response;
     }
 
