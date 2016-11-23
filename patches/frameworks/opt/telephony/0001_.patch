@@ -1,13 +1,15 @@
-commit cad3e4ff4087874ed1f2e1b6243cd40042cbded1
+commit 8f331ce5afbe6462f074b4c9c52677e9e94576ad
 Author: Maxim <hqdevnews@gmail.com>
-Date:   Sun Oct 30 02:39:26 2016 +0700
+Date:   Thu Nov 24 00:48:13 2016 +0200
 
     Remove UICC TLV Data decoding
     
     On some phones with implementated UICC TLV Data decoding, SIM's not recognised. With reverted commit all fine.
+    
+    Change-Id: I9cd67e187bd727d319d03558a6f7b69941434464
 
 diff --git a/src/java/com/android/internal/telephony/uicc/IccFileHandler.java b/src/java/com/android/internal/telephony/uicc/IccFileHandler.java
-index 22d0dfe..a84eb46 100644
+index 22d0dfe..bd7656f 100644
 --- a/src/java/com/android/internal/telephony/uicc/IccFileHandler.java
 +++ b/src/java/com/android/internal/telephony/uicc/IccFileHandler.java
 @@ -359,7 +359,7 @@ public abstract class IccFileHandler extends Handler implements IccConstants {
@@ -102,7 +104,7 @@ index 22d0dfe..a84eb46 100644
  
                   if (lc.mLoadAll) {
                       lc.results = new ArrayList<byte[]>(lc.mCountRecords);
-@@ -634,27 +609,17 @@ public abstract class IccFileHandler extends Handler implements IccConstants {
+@@ -634,27 +609,18 @@ public abstract class IccFileHandler extends Handler implements IccConstants {
  
                  fileid = msg.arg1;
  
@@ -134,29 +136,16 @@ index 22d0dfe..a84eb46 100644
  
 +                size = ((data[RESPONSE_DATA_FILE_SIZE_1] & 0xff) << 8)
 +                       + (data[RESPONSE_DATA_FILE_SIZE_2] & 0xff);
++                
 +
                  mCi.iccIOForApp(COMMAND_READ_BINARY, fileid, getEFPath(fileid),
                                  0, 0, size, null, null, mAid,
                                  obtainMessage(EVENT_READ_BINARY_DONE,
-      
 diff --git a/src/java/com/android/internal/telephony/uicc/UiccTlvData.java b/src/java/com/android/internal/telephony/uicc/UiccTlvData.java
-index 17f594c..a709822 100644
+index 17f594c..47bb2fc 100644
 --- a/src/java/com/android/internal/telephony/uicc/UiccTlvData.java
 +++ b/src/java/com/android/internal/telephony/uicc/UiccTlvData.java
-@@ -1,12 +1,9 @@
- package com.android.internal.telephony.uicc;
- 
--import android.telephony.Rlog;
--
- /**
-  * UICC TLV Data Parser according to ETSI TS 102 221 spec.
-  */
- public class UiccTlvData {
--    private static final String LOG_TAG = "UiccTlvData";
- 
-     private static final int TLV_FORMAT_ID = 0x62;
- 
-@@ -85,9 +82,9 @@ public class UiccTlvData {
+@@ -85,9 +85,9 @@ public class UiccTlvData {
                          break;
  
                      default:
@@ -165,6 +154,7 @@ index 17f594c..a709822 100644
 -                        break;
 +                        //Unknown TAG
 +                        throw new IccFileTypeMismatch();
-+
++                        
                  }
              }
+ 
