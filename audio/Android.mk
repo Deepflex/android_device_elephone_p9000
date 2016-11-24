@@ -16,12 +16,12 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libmedia
+LOCAL_C_INCLUDES := \
+    frameworks/rs/server
 
 LOCAL_SRC_FILES := \
     mtkaudio_stubs.cpp
 
-LOCAL_C_INCLUDES := \
-    $(TOP)frameworks/rs/server
+LOCAL_MODULE := libmedia
 
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
