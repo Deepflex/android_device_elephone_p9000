@@ -28,6 +28,7 @@ import android.util.Log;
 
 public class KeyDisabler {
 
+    private static boolean isActive = false;
     /*
      * All HAF classes should export this boolean.
      * Real implementations must, of course, return true
@@ -40,7 +41,7 @@ public class KeyDisabler {
      */
 
     public static boolean isActive() {
-        return false;
+        return isActive;
     }
 
     /*
@@ -51,7 +52,7 @@ public class KeyDisabler {
         //throw new UnsupportedOperationException();
         isActive = state;
         Log.i("KeyDisabler", "setActive " + state);
-        return false;
+        return isActive;
     }
 
 }
