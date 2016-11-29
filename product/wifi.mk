@@ -1,6 +1,7 @@
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
+    lib_driver_cmd_mt66xx \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant
