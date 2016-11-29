@@ -19,7 +19,7 @@ persist.radio.fd.off.r8.counter=5
 
 # Wifi
 wifi.interface=wlan0
-wifi.tethering.interface=ap
+wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
 
 # Graphics
