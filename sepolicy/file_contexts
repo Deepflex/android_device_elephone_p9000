@@ -263,7 +263,7 @@
 /dev/socket/volte_ua(/.*)? u:object_r:volte_ua_socket:s0
 /dev/socket/volte_imsa1(/.*)? u:object_r:volte_imsa1_socket:s0
 /dev/socket/volte_imsvt1(/.*)? u:object_r:volte_imsvt1_socket:s0
-/dev/socket/wpa_wlan0(/.*)? u:object_r:wpa_wlan0_socket:s0
+/dev/socket/wpa_ap0(/.*)? u:object_r:wpa_ap0_socket:s0
 /dev/socket/zygote(/.*)? u:object_r:zygote_socket:s0
 /dev/socket/wod_action(/.*)? u:object_r:wod_action_socket:s0
 /dev/socket/wod_sim(/.*)? u:object_r:wod_sim_socket:s0

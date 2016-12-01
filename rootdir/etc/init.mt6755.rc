@@ -967,30 +967,30 @@ service pq /system/bin/pq
 
 
 service p2p_supplicant /system/bin/wpa_supplicant \
-    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
+    -iap0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf -N \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -e/data/misc/wifi/entropy.bin -dd \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -g@android:wpa_wlan0
+    -O/data/misc/wifi/sockets -g@android:wpa_ap0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
     #   user wifi
     #   group wifi inet keystore
     class main
-    socket wpa_wlan0 dgram 660 wifi wifi
+    socket wpa_ap0 dgram 660 wifi wifi
     disabled
     oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant \
-    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -e/data/misc/wifi/entropy.bin -dd \
+    -iap0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -e/data/misc/wifi/entropy.bin -dd \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -g@android:wpa_wlan0
+    -O/data/misc/wifi/sockets -g@android:wpa_ap0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
     #   user wifi
     #   group wifi inet keystore
     class main
-    socket wpa_wlan0 dgram 660 wifi wifi
+    socket wpa_ap0 dgram 660 wifi wifi
     disabled
     oneshot
 
@@ -1002,7 +1002,7 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -BK -dd
     disabled
     oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -BK -dd
+service dhcpcd_ap0 /system/bin/dhcpcd -BK -dd
     class main
     user root
     group net_admin net_raw
@@ -1016,7 +1016,7 @@ service dhcpcd_p2p /system/bin/dhcpcd -BK -dd
     disabled
     oneshot
 
-service iprenew_wlan0 /system/bin/dhcpcd -n
+service iprenew_ap0 /system/bin/dhcpcd -n
     class main
     user dhcp
     group net_admin net_raw
@@ -1044,35 +1044,35 @@ service dhcpv6_inform /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cSIP.conf" -D
     disabled
     oneshot
 
-service dhcp6cDNS_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
+service dhcp6cDNS_ap0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df ap0
     disabled
     oneshot
 
-service dhcp6c_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
+service dhcp6c_ap0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df ap0
     disabled
     oneshot
 
-on property:service.dhcp6c_wlan0.enable=0
-    stop dhcp6c_wlan0
+on property:service.dhcp6c_ap0.enable=0
+    stop dhcp6c_ap0
 
-on property:service.dhcp6c_wlan0.enable=1
-    start dhcp6c_wlan0
+on property:service.dhcp6c_ap0.enable=1
+    start dhcp6c_ap0
 
 service dhcp6c_PD /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cPD.conf" -Df
     disabled
     oneshot
 
-service pppoe_wlan0 /system/bin/launchpppoe
+service pppoe_ap0 /system/bin/launchpppoe
     user root
     group radio cache inet misc
     disabled
     oneshot
 
-on property:service.pppoe_wlan0.enable=0
-    stop pppoe_wlan0
+on property:service.pppoe_ap0.enable=0
+    stop pppoe_ap0
 
-on property:service.pppoe_wlan0.enable=1
-    start pppoe_wlan0
+on property:service.pppoe_ap0.enable=1
+    start pppoe_ap0
 # write proc for test sim
     on property:gsm.sim.ril.testsim=0
     write /proc/sys/net/netfilter/nf_conntrack_tcp_no_window_check 0

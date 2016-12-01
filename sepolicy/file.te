@@ -51,7 +51,7 @@ type netdiag_socket, file_type;
 type atci_service_socket, file_type;
 type atci_serv_fw_socket, file_type;
 type atci_audio_socket, file_type;
-type wpa_wlan0_socket, file_type;
+type wpa_ap0_socket, file_type;
 type soc_vt_imcb_socket, file_type;
 type soc_vt_tcv_socket, file_type;
 type soc_vt_stk_socket, file_type;

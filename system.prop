@@ -18,7 +18,7 @@ persist.radio.fd.r8.counter=15
 persist.radio.fd.off.r8.counter=5
 
 # Wifi
-wifi.interface=wlan0
+wifi.interface=ap0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
 

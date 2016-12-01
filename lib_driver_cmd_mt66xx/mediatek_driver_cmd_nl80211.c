@@ -44,7 +44,7 @@ static int wpa_driver_mediatek_set_country(void *priv, const char *alpha2_arg)
     char replace_ifname[IFNAMSIZ+1];
 
     memset(replace_ifname, 0, IFNAMSIZ+1);
-    os_strlcpy(replace_ifname, "wlan0", os_strlen("wlan0")+1);
+    os_strlcpy(replace_ifname, "ap0", os_strlen("ap0")+1);
 #endif
 
     wpa_printf(MSG_DEBUG, "wpa_driver_nl80211_set_country");
@@ -55,10 +55,10 @@ static int wpa_driver_mediatek_set_country(void *priv, const char *alpha2_arg)
     }
     os_memset(&iwr, 0, sizeof(iwr));
 #ifdef MTK_TC1_FEATURE
-    // convert 'p2p0' -> 'wlan0' :
+    // convert 'p2p0' -> 'ap0' :
     // when iface name is p2p0, COUNTRY driver command doesn't support in MTK solution.
     if (os_strncmp(drv->first_bss->ifname, "p2p0", os_strlen("p2p0")) == 0) {
-        wpa_printf(MSG_DEBUG, "Change interface name : p2p0->wlan0");
+        wpa_printf(MSG_DEBUG, "Change interface name : p2p0->ap0");
         os_strlcpy(iwr.ifr_name, replace_ifname, IFNAMSIZ );
     } else {
         os_strlcpy(iwr.ifr_name, drv->first_bss->ifname, IFNAMSIZ);
