@@ -12,9 +12,8 @@
      limitations under the License.
 -->
 <resources>
-
-    <!-- All the capabilities of the LEDs on this device, stored as a bit field.
-         If defined, this overrides all of the older settings:
+	<!-- What can the LEDs on this device do? If defined, this overrides all of the
+         older settings:
 
          com.android.internal.R.bool.config_multiColorNotificationLed
          com.android.internal.R.bool.config_multiColorBatteryLed
@@ -24,13 +23,12 @@
          org.cyanogenmod.platform.internal.R.bool.config_adjustableNotificationLedBrightness
 
          Use the following values from NotificationManager:
-         LIGHTS_RGB_NOTIFICATION_LED = 1
-         LIGHTS_RGB_BATTERY_LED = 2
-         LIGHTS_MULTIPLE_NOTIFICATION_LED = 4
-         LIGHTS_PULSATING_LED = 8
-         LIGHTS_SEGMENTED_BATTERY_LED = 16
-         LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
+         LIGHTS_RGB_NOTIFICATION = 0
+         LIGHTS_RGB_BATTERY = 1
+         LIGHTS_MULTIPLE_LED = 2
+         LIGHTS_LED_PULSE = 3
+         LIGHTS_SEGMENTED_BATTERY_LIGHTS = 4
+         LIGHTS_ADJUSTABLE_NOTIFICATION_BRIGHTNESS = 5
     -->
-    <integer name="config_deviceLightCapabilities" translatable="false">8</integer>
-
+	<integer-array translatable="false" name="config_deviceLightCapabilities">3</integer-array>
 </resources>
