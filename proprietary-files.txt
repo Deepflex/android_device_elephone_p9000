@@ -209,9 +209,6 @@ etc/nfc_conformance/DTA_Config/Others/platform_config_tagOp.txt
 etc/nfc_conformance/DTA_Config/Others/platform_polling.txt
 etc/nfc_conformance/DTA_Config/Others/platform_polling_tagOp.txt
 etc/radvd/radvd.conf
-etc/wifi/p2p_supplicant_overlay.conf
-etc/wifi/wpa_supplicant.conf
-etc/wifi/wpa_supplicant_overlay.conf
 lib/drm/libdrmmtkplugin.so
 lib/egl/libGLES_mali.so
 lib/hw/audio.primary.mt6755.so
