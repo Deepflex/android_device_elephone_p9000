@@ -1,6 +1,5 @@
 # Platform
 TARGET_BOARD_PLATFORM := mt6755
-TARGET_LDPRELOAD += libxlog.so
 
 # Architecture
 TARGET_ARCH := arm64
