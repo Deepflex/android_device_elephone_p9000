@@ -7,4 +7,4 @@ BOARD_MKBOOTIMG_ARGS := --board 1465391499 --ramdisk_offset 0x04f88000 --second_
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/elephone/p9000
-TARGET_KERNEL_CONFIG := cm_p9000_defconfig
+TARGET_KERNEL_CONFIG := lineage_p9000_defconfig
