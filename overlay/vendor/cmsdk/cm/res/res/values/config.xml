@@ -31,4 +31,7 @@
          LIGHTS_ADJUSTABLE_NOTIFICATION_BRIGHTNESS = 5
     -->
 	<integer-array translatable="false" name="config_deviceLightCapabilities">3</integer-array>
+	
+	<!-- Default values for LiveDisplay -->
+    <integer name="config_defaultLiveDisplayMode">0</integer>
 </resources>
