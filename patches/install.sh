@@ -2,7 +2,7 @@ echo $1
 rootdirectory="$PWD"
 # ---------------------------------
 
-dirs="frameworks/av"
+dirs="frameworks/av system/netd"
 
 for dir in $dirs ; do
 	cd $rootdirectory

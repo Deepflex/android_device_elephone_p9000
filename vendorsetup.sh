@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright 2017  The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,5 +21,5 @@
 # function: add_lunch_combo generic-eng
 
 for var in eng user userdebug; do
-  add_lunch_combo cm_p9000-$var
+  add_lunch_combo lineage_p9000-$var
 done

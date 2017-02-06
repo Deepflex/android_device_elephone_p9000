@@ -1,4 +1,4 @@
-deepflex@deepflex-all-series:~/cm13/device/elephone/p9000$ adb shell su -c "ls -l /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/"
+deepflex@all-series:~/los13/device/elephone/p9000$ adb shell su -c "ls -l /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/"
 boot -> /dev/block/mmcblk0p20
 cache -> /dev/block/mmcblk0p27
 expdb -> /dev/block/mmcblk0p3
@@ -29,7 +29,7 @@ tee1 -> /dev/block/mmcblk0p22
 tee2 -> /dev/block/mmcblk0p23
 userdata -> /dev/block/mmcblk0p28
 
-deepflex@deepflex-all-series:~/cm13/device/elephone/p9000$ adb shell cat /proc/partitions
+deepflex@all-series:~/los13/device/elephone/p9000$ adb shell cat /proc/partitions
 major minor  #blocks  name
 
    7        0       1254 loop0

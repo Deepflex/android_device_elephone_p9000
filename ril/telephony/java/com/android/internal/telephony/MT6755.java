@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2016 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -499,6 +499,16 @@ public class MT6755 extends RIL implements CommandsInterface {
             }
         }
         return ret;
+    }
+    
+    @Override
+    public void
+    iccIOForApp (int command, int fileid, String path, int p1, int p2, int p3,
+            String data, String pin2, String aid, Message result) {
+        if (command == 0xc0 && p3 == 0) {
+            p3 = 15;
+        }
+        super.iccIOForApp(command, fileid, path, p1, p2, p3, data, pin2, aid, result);
     }
 
 }

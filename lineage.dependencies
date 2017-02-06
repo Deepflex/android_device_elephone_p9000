@@ -1,0 +1,12 @@
+[
+  {
+    "remote": "github",
+    "repository": "deepflex/android_vendor_elephone_p9000",
+    "target_path": "vendor/elephone/p9000"
+  },
+  {
+    "remote": "github",
+    "repository": "deepflex/android_kernel_elephone_p9000",
+    "target_path": "kernel/elephone/p9000"
+  }
+] 

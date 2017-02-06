@@ -1,7 +1,7 @@
-Elephone P9000 - CyanogenMod 13.0/AOSP
+Elephone P9000 - LineageOS 13.0/AOSP
 ==============
 
-This branch is device for building of the CyanogenMod 13.0 and Android Marshmallow 6.0 AOSP ROMs. For more information about building the ROM, read our [build manual](manual).
+This branch is device for building of the LineageOS 13.0 and Android Marshmallow 6.0 AOSP ROMs. For more information about building the ROM, read our [build manual](manual).
 
 ---
 
@@ -9,7 +9,7 @@ This branch is device for building of the CyanogenMod 13.0 and Android Marshmall
 
 ![Elephone P9000](http://g03.a.alicdn.com/kf/HTB1.TsuKVXXXXanXXXXq6xXFXXX6/Official-Direct-Elephone-P9000-Helio-P10-MTK6755-2-0GHz-Octa-Core-4GB-RAM-32GB-ROM-5.jpg "Elephone P9000 in black")
 
-Announced on 25th December 2015, the Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone. The P9000 now supports CyanogenMod 13.0!
+Announced on 25th December 2015, the Elephone P9000 (codenamed _"P9000"_) is a flagship smartphone from Elephone. The P9000 now supports LineageOS 13.0!
 
 ### Specifications
 
@@ -63,7 +63,7 @@ Front Camera | 8MP (OV)
  * PE and PE+ (fast charging)
 
 ### Thanks to:
- * CyanogenMod team
+ * LineageOS team
  * Wuxianlin
  * Ferhung
  * SHVED
