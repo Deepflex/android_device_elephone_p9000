@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libaudiopolicymanagerdefault \
     libtinycompress \
-    libtinyxml
+    libtinyxml \
+    tinymix
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
