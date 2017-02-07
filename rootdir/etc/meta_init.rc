@@ -5,7 +5,6 @@
 #
 import /init.environ.rc
 import init.fon.rc
-import init.aee.rc
 import init.trustonic.rc
 import meta_init.project.rc
 #Make sure meta_init.modem.rc is the last rc file.
