@@ -3,7 +3,6 @@
 import init.project.rc
 import /FWUpgradeInit.rc
 import init.xlog.rc
-import init.aee.rc
 import init.fon.rc
 import init.volte.rc
 import init.mal.rc
@@ -22,6 +21,8 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
+    export LD_PRELOAD "libmtk_symbols.so"
+
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
 
