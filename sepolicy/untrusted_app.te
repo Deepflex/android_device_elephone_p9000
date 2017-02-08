@@ -72,3 +72,9 @@ allow untrusted_app esfp0_device:chr_file rw_file_perms;
 allow untrusted_app etsd_service:service_manager find;
 allow untrusted_app etsd:binder {call transfer};
 
+# Fix denials
+allow untrusted_app device:dir { read open };
+allow untrusted_app zygote:dir { search };
+allow untrusted_app zygote:file { read };
+
+allow untrusted_app app_data_file:dir { open };

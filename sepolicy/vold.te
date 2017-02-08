@@ -140,3 +140,7 @@ allow vold block_device:blk_file { read write ioctl open getattr };
 # Operation : Migration
 # Purpose : for ntfs device mount
 allow vold mmcblk1p1_block_device:blk_file { open read write lock ioctl getattr};
+
+# Fix denials
+allow vold logd:dir { read };
+

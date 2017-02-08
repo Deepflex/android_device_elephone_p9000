@@ -203,3 +203,6 @@ allow system_app mtk_mwblacklist_service:service_manager find;
 # Purpose: for et320 kernel uevent
 # Package: android.ui
 allow system_app self:netlink_kobject_uevent_socket { create ioctl read getattr setattr bind connect getopt setopt shutdown };
+
+# Fix Radio
+allow system_app fm_device:chr_file rw_file_perms;
