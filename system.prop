@@ -2,7 +2,7 @@
 rild.libpath=mtk-ril.so
 rild.libargs=-d[SPACE]/dev/ttyC0
 ril.specific.sm_cause=0
-ril.external.md
+ril.external.md=0
 ril.current.share_modem=2
 ril.flightmode.poweroffMD=1
 ril.telephony.mode=0
